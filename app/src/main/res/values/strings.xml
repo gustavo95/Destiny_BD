@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Destiny BD</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="game">O jogo</string>
+    <string name="guardian">Equipamentos do guardião</string>
+    <string name="mission">Missões</string>
+    <string name="events">Eventos</string>
+</resources>
