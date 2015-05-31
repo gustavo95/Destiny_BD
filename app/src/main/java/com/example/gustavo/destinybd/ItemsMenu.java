@@ -1,26 +1,24 @@
 package com.example.gustavo.destinybd;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class MainMenu extends Activity {
+public class ItemsMenu extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_items_menu);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu_ab, menu);
+        getMenuInflater().inflate(R.menu.menu_items_menu, menu);
         return true;
     }
 
@@ -32,15 +30,10 @@ public class MainMenu extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_search) {
+        if (id == R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void openItemsMenu(View view){
-        Intent intent = new Intent(this, ItemsMenu.class);
-        startActivity(intent);
     }
 }

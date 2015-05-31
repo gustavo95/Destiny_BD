@@ -3,18 +3,28 @@
     package="com.example.gustavo.destinybd" >
 
     <application
-        android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
         android:allowBackup="true"
         android:icon="@mipmap/destiny_logo"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
         <activity
             android:name=".MainMenu"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemsMenu"
+            android:label="@string/title_activity_items_menu"
+            android:parentActivityName=".MainMenu"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gustavo.destinybd.MainMenu" />
         </activity>
     </application>
 

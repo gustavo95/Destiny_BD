@@ -14,7 +14,11 @@
         android:background="@drawable/destiny_traveler"
         android:gravity="bottom"
         android:textColor="@android:color/white"
-        android:layout_margin="2dp"/>
+        android:layout_margin="2dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="12"/>
 
     <Button
         android:id="@+id/ButtonGuardian"
@@ -27,7 +31,12 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/ButtonGame"
-        android:layout_margin="2dp"/>
+        android:layout_margin="2dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="12"
+        android:onClick="openItemsMenu"/>
 
     <Button
         android:id="@+id/ButtonMission"
@@ -39,7 +48,11 @@
         android:textColor="@android:color/white"
         android:layout_below="@+id/ButtonGame"
         android:layout_toEndOf="@+id/ButtonGuardian"
-        android:layout_margin="2dp"/>
+        android:layout_margin="2dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="12"/>
 
     <Button
         android:id="@+id/ButtonEvent"
@@ -51,7 +64,11 @@
         android:textColor="@android:color/white"
         android:layout_below="@+id/ButtonMission"
         android:layout_toEndOf="@+id/ButtonGuardian"
-        android:layout_margin="2dp"/>
+        android:layout_margin="2dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="12"/>
 
 
 </RelativeLayout>

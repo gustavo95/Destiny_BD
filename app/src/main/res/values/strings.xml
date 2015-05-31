@@ -4,7 +4,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="game">O jogo</string>
-    <string name="guardian">Equipamentos do guardião</string>
+    <string name="guardian">Equipamentos</string>
     <string name="mission">Missões</string>
     <string name="events">Eventos</string>
+    <string name="title_activity_items_menu">Equipamentos</string>
+    <string name="primaryWeapons">Armas Principais</string>
+    <string name="specialWeapons">Armas Especiais</string>
+    <string name="heavyWeapons">Armas Pesadas</string>
 </resources>
