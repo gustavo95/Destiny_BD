@@ -11,4 +11,7 @@
     <string name="primaryWeapons">Armas Principais</string>
     <string name="specialWeapons">Armas Especiais</string>
     <string name="heavyWeapons">Armas Pesadas</string>
+    <string name="warlock_armor">Armaduras de Arcano</string>
+    <string name="hunter_armor">Armaduras de Caçador</string>
+    <string name="titan_armor">Armaduras de Titã</string>
 </resources>

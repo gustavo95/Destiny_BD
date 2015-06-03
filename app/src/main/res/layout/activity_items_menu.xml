@@ -53,5 +53,55 @@
         android:shadowDy="1"
         android:shadowRadius="12" />
 
+    <Button
+        android:id="@+id/ButtonWarlockArmor"
+        android:text="@string/warlock_armor"
+        android:layout_width="175dp"
+        android:layout_height="155dp"
+        android:layout_above="@+id/ButtonSpecialWeapons"
+        android:layout_toEndOf="@+id/ButtonPrimaryWeapons"
+        android:layout_margin="2dp"
+        android:background="@drawable/warlock_armor"
+        android:gravity="bottom"
+        android:textColor="@android:color/white"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="12" />
+
+    <Button
+        android:id="@+id/ButtonHunterArmor"
+        android:text="@string/hunter_armor"
+        android:layout_width="175dp"
+        android:layout_height="155dp"
+        android:background="@drawable/hunter_armor"
+        android:gravity="bottom"
+        android:textColor="@android:color/white"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="12"
+
+        android:layout_alignTop="@+id/ButtonSpecialWeapons"
+        android:layout_alignStart="@+id/ButtonWarlockArmor"
+        android:layout_alignEnd="@+id/ButtonWarlockArmor" />
+
+    <Button
+        android:id="@+id/ButtonTitanArmor"
+        android:text="@string/titan_armor"
+        android:layout_width="175dp"
+        android:layout_height="155dp"
+        android:background="@drawable/titan_armor"
+        android:gravity="bottom"
+        android:textColor="@android:color/white"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="12"
+
+        android:layout_alignTop="@+id/ButtonHeavyWeapons"
+        android:layout_alignStart="@+id/ButtonHunterArmor"
+        android:layout_alignEnd="@+id/ButtonHunterArmor" />
+
 
 </RelativeLayout>
