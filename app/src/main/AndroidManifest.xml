@@ -21,10 +21,18 @@
             android:name=".ItemsMenu"
             android:label="@string/title_activity_items_menu"
             android:parentActivityName=".MainMenu"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gustavo.destinybd.MainMenu" />
+        </activity>
+        <activity
+            android:name=".WeaponsIndex"
+            android:label="@string/title_activity_weapons_index"
+            android:parentActivityName=".ItemsMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gustavo.destinybd.ItemsMenu" />
         </activity>
     </application>
 
