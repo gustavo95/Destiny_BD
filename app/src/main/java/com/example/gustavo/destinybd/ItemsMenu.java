@@ -1,11 +1,16 @@
 package com.example.gustavo.destinybd;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import domain.ItemsLists.PrimaryWeaponsList;
 
 public class ItemsMenu extends Activity {
+    public final static String EXTRA_INTEGER = "com.example.gustavo.destinybd.INTEGER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +39,11 @@ public class ItemsMenu extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void openPrimaryWeaponIndex(View view){
+        Intent intent = new Intent(this, WeaponsIndex.class);
+        intent.putExtra(EXTRA_INTEGER, 1);
+        startActivity(intent);
     }
 }

@@ -4,13 +4,13 @@ import domain.Elements;
 import domain.Perks;
 
 /**
- * Created by Gustavo on 06/06/2015
+ * Created by Gustavo on 07/06/2015
  */
-public class ExoticWeapon extends Weapon {
+public class LegendaryWeapon extends Weapon {
     private String location;
     private Perks perks;
 
-    public ExoticWeapon(String name, WeaponType type, int attackMin, int image, Elements element, WeaponAttributes attributes, String location, Perks perks) {
+    public LegendaryWeapon(String name, WeaponType type, int attackMin, int image, Elements element, WeaponAttributes attributes, String location, Perks perks) {
         super(name, type, attackMin, 365, image, element, attributes);
         this.location = location;
         this.perks = perks;

@@ -19,7 +19,8 @@
         android:shadowColor="@android:color/background_dark"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="12" />
+        android:shadowRadius="12"
+        android:onClick="openPrimaryWeaponIndex"/>
 
     <Button
         android:id="@+id/ButtonSpecialWeapons"

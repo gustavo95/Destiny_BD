@@ -1,9 +1,17 @@
 package com.example.gustavo.destinybd;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+
+import domain.ItemsLists.PrimaryWeaponsList;
+import domain.weapons.Weapon;
 
 
 public class WeaponsIndex extends Activity {
@@ -11,7 +19,18 @@ public class WeaponsIndex extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+
+        if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 0) == 1){
+            primaryWeaponsButtons();
+        }
+
         setContentView(R.layout.activity_weapons_index);
+
+        if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 0) == 1){
+            primaryWeaponsButtons();
+        }
     }
 
 
@@ -37,5 +56,30 @@ public class WeaponsIndex extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void primaryWeaponsButtons(){
+        PrimaryWeaponsList weaponsList = new PrimaryWeaponsList();
+        Button image;
+        Button name;
+        TableRow tr;
+        TableLayout tl = (TableLayout) findViewById(R.id.tableIndex);
+        int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lWidth = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
+        try {
+            for (Weapon w : weaponsList.getWeapons()) {
+                tr = new TableRow(this);
+                image = new Button(this);
+                image.setBackground(getResources().getDrawable(w.getImage()));
+                tr.addView(image);
+                name = new Button(this);
+                name.setTextSize(20);
+                name.setText(w.getName());
+                tr.addView(name);
+                tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
+            }
+        }catch (Exception E){
+            System.err.println("Erro!");
+        }
+    }
 
 }
