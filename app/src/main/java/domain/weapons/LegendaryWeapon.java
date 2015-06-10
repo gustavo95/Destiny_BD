@@ -1,5 +1,7 @@
 package domain.weapons;
 
+import android.graphics.Color;
+
 import domain.Elements;
 import domain.Perks;
 
@@ -10,8 +12,8 @@ public class LegendaryWeapon extends Weapon {
     private String location;
     private Perks perks;
 
-    public LegendaryWeapon(String name, WeaponType type, int attackMin, int image, Elements element, WeaponAttributes attributes, String location, Perks perks) {
-        super(name, type, attackMin, 365, image, element, attributes);
+    public LegendaryWeapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes, String location, Perks perks) {
+        super(name, type, attack, image, element, attributes);
         this.location = location;
         this.perks = perks;
     }
@@ -22,5 +24,10 @@ public class LegendaryWeapon extends Weapon {
 
     public Perks getPerks() {
         return perks;
+    }
+
+    @Override
+    public int color(){
+        return Color.rgb(82, 47, 101);
     }
 }

@@ -8,11 +8,16 @@
     android:scrollX="@dimen/activity_vertical_margin"
     tools:context="com.example.gustavo.destinybd.WeaponsIndex">
 
-    <TableLayout
-        android:id="@+id/tableIndex"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scrollbars="horizontal"
-        android:shrinkColumns="0"/>
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:id="@+id/tableIndex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:shrinkColumns="0"
+            android:layout_marginStart="15dp" />
+        </ScrollView>
 
 </RelativeLayout>

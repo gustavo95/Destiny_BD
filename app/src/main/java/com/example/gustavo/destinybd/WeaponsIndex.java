@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+
+import java.util.List;
 
 import domain.ItemsLists.PrimaryWeaponsList;
 import domain.weapons.Weapon;
@@ -22,14 +25,11 @@ public class WeaponsIndex extends Activity {
 
         Intent intent = getIntent();
 
-        if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 0) == 1){
-            primaryWeaponsButtons();
-        }
-
         setContentView(R.layout.activity_weapons_index);
 
         if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 0) == 1){
-            primaryWeaponsButtons();
+            PrimaryWeaponsList weapons = new PrimaryWeaponsList();
+            primaryWeaponsButtons(weapons.getWeapons());
         }
     }
 
@@ -56,25 +56,31 @@ public class WeaponsIndex extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void primaryWeaponsButtons(){
-        PrimaryWeaponsList weaponsList = new PrimaryWeaponsList();
-        Button image;
+    private void primaryWeaponsButtons(List<Weapon> weaponsList){
+        ImageButton image;
         Button name;
+
         TableRow tr;
         TableLayout tl = (TableLayout) findViewById(R.id.tableIndex);
         int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
         int lWidth = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
         try {
-            for (Weapon w : weaponsList.getWeapons()) {
+            for (Weapon w : weaponsList) {
                 tr = new TableRow(this);
-                image = new Button(this);
-                image.setBackground(getResources().getDrawable(w.getImage()));
+
+                image = new ImageButton(this);
+                image.setImageDrawable(getResources().getDrawable(w.getImage()));
+                image.setBackgroundColor(w.color());
                 tr.addView(image);
+
                 name = new Button(this);
-                name.setTextSize(20);
-                name.setText(w.getName());
+                name.setTextSize(17);
+                name.setText(w.getName() + "\n" + w.getType() + "\nDano: " + w.getAttack());
+                name.setBackgroundColor(w.color());
                 tr.addView(name);
+
+
                 tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
             }
         }catch (Exception E){

@@ -5,21 +5,19 @@ import domain.Elements;
 /**
  * Created by Gustavo on 06/06/2015
  */
-public class Weapon {
+public abstract class Weapon {
 
     private String name;
-    private WeaponType type;
-    private int attackMin;
-    private int attackMax;
+    private String type;
+    private String attack;
     private int image;
     private Elements element;
     private WeaponAttributes attributes;
 
-    public Weapon(String name, WeaponType type, int attackMin, int attackMax, int image, Elements element, WeaponAttributes attributes) {
+    public Weapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes) {
         this.name = name;
         this.type = type;
-        this.attackMin = attackMin;
-        this.attackMax = attackMax;
+        this.attack = attack;
         this.image = image;
         this.element = element;
         this.attributes = attributes;
@@ -29,16 +27,12 @@ public class Weapon {
         return name;
     }
 
-    public WeaponType getType() {
+    public String getType() {
         return type;
     }
 
-    public int getAttackMin() {
-        return attackMin;
-    }
-
-    public int getAttackMax() {
-        return attackMax;
+    public String getAttack() {
+        return attack;
     }
 
     public int getImage() {
@@ -52,5 +46,7 @@ public class Weapon {
     public WeaponAttributes getAttributes() {
         return attributes;
     }
+
+    public abstract int color();
 
 }
