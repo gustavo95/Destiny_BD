@@ -7,8 +7,11 @@ import java.util.List;
 
 import domain.Elements;
 import domain.Perks;
+import domain.weapons.CommonWeapon;
 import domain.weapons.ExoticWeapon;
 import domain.weapons.LegendaryWeapon;
+import domain.weapons.RareWeapon;
+import domain.weapons.UncommonWeapon;
 import domain.weapons.Weapon;
 import domain.weapons.WeaponAttributes;
 
@@ -21,7 +24,10 @@ public class PrimaryWeaponsList {
     public PrimaryWeaponsList(){
         weapons = new ArrayList<>();
         insertExotics();
-        insertLegendary();
+        insertLegendarys();
+        insertRares();
+        insertUncommons();
+        insertCommons();
     }
 
     public List<Weapon> getWeapons() {
@@ -54,7 +60,7 @@ public class PrimaryWeaponsList {
 
     }
 
-    private void insertLegendary(){
+    private void insertLegendarys(){
         String fAutomatico = "Fuzil Automático";
         String fBatedor = "Fuzil de Batedor";
         String fPulso = "Fuzil de Pulso";
@@ -72,6 +78,42 @@ public class PrimaryWeaponsList {
                 R.drawable.allfate_55a, Elements.cinetic,
                 new WeaponAttributes(66, 14, 47, 65, 62, 27), "?",
                 new Perks(randomPerk2, reforge, null)));
+    }
+
+    private void insertRares(){
+        String fAutomatico = "Fuzil Automático";
+        String fBatedor = "Fuzil de Batedor";
+        String fPulso = "Fuzil de Pulso";
+        String cMao = "Canhão de Mão";
+
+        weapons.add(new RareWeapon("A Little Voice", cMao,"224/242",
+                R.drawable.a_little_voice, new WeaponAttributes(15, 94, 34, 26, 26, 7)));
+    }
+
+    private void insertUncommons(){
+        String fAutomatico = "Fuzil Automático";
+        String fBatedor = "Fuzil de Batedor";
+        String fPulso = "Fuzil de Pulso";
+        String cMao = "Canhão de Mão";
+
+        Perks p0 = null;
+        Perks p1 = new Perks("Essa arma possui um aprimoramento aleatorio", null, null);
+
+        weapons.add(new UncommonWeapon("Bandit Mk. 36", cMao,"81/89",
+                R.drawable.bandit_mk_36, new WeaponAttributes(22, 81, 17, 38, 26, 8), p1));
+    }
+
+    private void insertCommons(){
+        String fAutomatico = "Fuzil Automático";
+        String fBatedor = "Fuzil de Batedor";
+        String fPulso = "Fuzil de Pulso";
+        String cMao = "Canhão de Mão";
+
+        Perks p0 = null;
+        Perks p1 = new Perks("Essa arma possui um aprimoramento aleatorio", null, null);
+
+        weapons.add(new CommonWeapon("Bandit Mk. 24", cMao,"72",
+                R.drawable.bandit_mk_24, new WeaponAttributes(22, 81, 22, 23, 30, 3)));
     }
 
 }

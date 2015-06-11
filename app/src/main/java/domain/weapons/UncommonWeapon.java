@@ -11,8 +11,8 @@ import domain.Perks;
 public class UncommonWeapon extends Weapon{
     private Perks perks;
 
-    public UncommonWeapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes, Perks perks) {
-        super(name, type, attack, image, element, attributes);
+    public UncommonWeapon(String name, String type, String attack, int image, WeaponAttributes attributes, Perks perks) {
+        super(name, type, attack, image, Elements.cinetic, attributes);
         this.perks = perks;
     }
 
@@ -22,6 +22,6 @@ public class UncommonWeapon extends Weapon{
 
     @Override
     public int color(){
-        return Color.rgb(1000, 1000, 1000);
+        return Color.rgb(54, 111, 66);
     }
 }

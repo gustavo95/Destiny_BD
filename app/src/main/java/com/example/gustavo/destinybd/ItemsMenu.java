@@ -41,6 +41,16 @@ public class ItemsMenu extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+    }
+
     public void openPrimaryWeaponIndex(View view){
         Intent intent = new Intent(this, WeaponsIndex.class);
         intent.putExtra(EXTRA_INTEGER, 1);

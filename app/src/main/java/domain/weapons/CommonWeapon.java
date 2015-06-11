@@ -8,12 +8,12 @@ import domain.Elements;
  * Created by Gustavo on 07/06/2015
  */
 public class CommonWeapon extends Weapon{
-    public CommonWeapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes) {
-        super(name, type, attack, image, element, attributes);
+    public CommonWeapon(String name, String type, String attack, int image, WeaponAttributes attributes) {
+        super(name, type, attack, image, Elements.cinetic, attributes);
     }
 
     @Override
     public int color(){
-        return Color.rgb(1000, 1000, 1000);
+        return Color.rgb(195, 188, 180);
     }
 }

@@ -2,6 +2,7 @@ package com.example.gustavo.destinybd;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -56,9 +58,20 @@ public class WeaponsIndex extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+    }
+
     private void primaryWeaponsButtons(List<Weapon> weaponsList){
         ImageButton image;
         Button name;
+        TextView nothing;
 
         TableRow tr;
         TableLayout tl = (TableLayout) findViewById(R.id.tableIndex);
@@ -68,19 +81,30 @@ public class WeaponsIndex extends Activity {
         try {
             for (Weapon w : weaponsList) {
                 tr = new TableRow(this);
+                tr.setBackgroundColor(w.color());
+                Float f;
 
                 image = new ImageButton(this);
                 image.setImageDrawable(getResources().getDrawable(w.getImage()));
-                image.setBackgroundColor(w.color());
+                image.setBackgroundColor(Color.TRANSPARENT);
+                f = new Float(0.75);
+                image.setScaleX(f);
+                image.setScaleY(f);
                 tr.addView(image);
 
                 name = new Button(this);
-                name.setTextSize(17);
-                name.setText(w.getName() + "\n" + w.getType() + "\nDano: " + w.getAttack());
-                name.setBackgroundColor(w.color());
+                name.setTextSize(16);
+                name.setText("\n" + w.getName() + "\n" + w.getType() + "\nAtaque: " + w.getAttack());
+                name.setBackgroundColor(Color.TRANSPARENT);
                 tr.addView(name);
 
+                tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
 
+                tr = new TableRow(this);
+                nothing = new TextView(this);
+                nothing.setTextSize(1);
+                nothing.setText("");
+                tr.addView(nothing);
                 tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
             }
         }catch (Exception E){
