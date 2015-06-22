@@ -1,9 +1,11 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
- * Created by Gustavo on 06/06/2015.
+ * Created by Gustavo on 06/06/2015
  */
-public class Perks {
+public class Perks implements Serializable{
     private String perk1;
     private String perk2;
     private String perk3;

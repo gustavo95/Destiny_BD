@@ -2,13 +2,15 @@ package domain.weapons;
 
 import android.graphics.Color;
 
+import java.io.Serializable;
+
 import domain.Elements;
 import domain.Perks;
 
 /**
  * Created by Gustavo on 07/06/2015
  */
-public class RareWeapon extends Weapon {
+public class RareWeapon extends Weapon implements Serializable {
     private Perks perks;
 
     public RareWeapon(String name, String type, String attack, int image, WeaponAttributes attributes) {

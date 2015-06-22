@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -20,6 +21,7 @@ import domain.weapons.Weapon;
 
 
 public class WeaponsIndex extends Activity {
+    public final static String EXTRA_WEAPON = "com.example.gustavo.destinybd.WEAPON";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class WeaponsIndex extends Activity {
 
         setContentView(R.layout.activity_weapons_index);
 
-        if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 0) == 1){
+        if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 1) == 1){
             PrimaryWeaponsList weapons = new PrimaryWeaponsList();
             primaryWeaponsButtons(weapons.getWeapons());
         }
@@ -69,6 +71,8 @@ public class WeaponsIndex extends Activity {
     }
 
     private void primaryWeaponsButtons(List<Weapon> weaponsList){
+        Float f;
+
         ImageButton image;
         Button name;
         TextView nothing;
@@ -80,9 +84,10 @@ public class WeaponsIndex extends Activity {
 
         try {
             for (Weapon w : weaponsList) {
+                final Weapon weapon = w;
                 tr = new TableRow(this);
                 tr.setBackgroundColor(w.color());
-                Float f;
+
 
                 image = new ImageButton(this);
                 image.setImageDrawable(getResources().getDrawable(w.getImage()));
@@ -90,12 +95,24 @@ public class WeaponsIndex extends Activity {
                 f = new Float(0.75);
                 image.setScaleX(f);
                 image.setScaleY(f);
+                image.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        openWeaponScreen(weapon);
+                    }
+                });
                 tr.addView(image);
 
                 name = new Button(this);
                 name.setTextSize(16);
                 name.setText("\n" + w.getName() + "\n" + w.getType() + "\nAtaque: " + w.getAttack());
                 name.setBackgroundColor(Color.TRANSPARENT);
+                image.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        openWeaponScreen(weapon);
+                    }
+                });
                 tr.addView(name);
 
                 tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
@@ -110,6 +127,12 @@ public class WeaponsIndex extends Activity {
         }catch (Exception E){
             System.err.println("Erro!");
         }
+    }
+
+    public void openWeaponScreen(Weapon w){
+        Intent  intent = new Intent(this, WeaponScreen.class);
+        intent.putExtra(EXTRA_WEAPON, w);
+        startActivity(intent);
     }
 
 }

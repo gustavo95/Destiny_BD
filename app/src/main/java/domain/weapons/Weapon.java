@@ -1,11 +1,13 @@
 package domain.weapons;
 
+import java.io.Serializable;
+
 import domain.Elements;
 
 /**
  * Created by Gustavo on 06/06/2015
  */
-public abstract class Weapon {
+public abstract class Weapon implements Serializable {
 
     private String name;
     private String type;

@@ -35,6 +35,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gustavo.destinybd.ItemsMenu" />
         </activity>
+        <activity
+            android:name=".WeaponScreen"
+            android:label="@string/title_activity_weapon_screen"
+            android:parentActivityName=".WeaponsIndex"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gustavo.destinybd.WeaponsIndex" />
+        </activity>
     </application>
 
 </manifest>

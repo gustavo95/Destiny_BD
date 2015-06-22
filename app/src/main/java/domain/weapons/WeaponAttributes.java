@@ -1,9 +1,11 @@
 package domain.weapons;
 
+import java.io.Serializable;
+
 /**
  * Created by Gustavo on 06/06/2015
  */
-public class WeaponAttributes {
+public class WeaponAttributes implements Serializable{
     private int rateFire;
     private int impact;
     private int range;

@@ -2,13 +2,15 @@ package domain.weapons;
 
 import android.graphics.Color;
 
+import java.io.Serializable;
+
 import domain.Elements;
 import domain.Perks;
 
 /**
  * Created by Gustavo on 07/06/2015
  */
-public class LegendaryWeapon extends Weapon {
+public class LegendaryWeapon extends Weapon implements Serializable{
     private String location;
     private Perks perks;
 
