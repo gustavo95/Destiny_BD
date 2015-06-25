@@ -56,4 +56,16 @@ public class ItemsMenu extends Activity {
         intent.putExtra(EXTRA_INTEGER, 1);
         startActivity(intent);
     }
+
+    public void openSpecialWeaponIndex(View view){
+        Intent intent = new Intent(this, WeaponsIndex.class);
+        intent.putExtra(EXTRA_INTEGER, 2);
+        startActivity(intent);
+    }
+
+    public void openHeavyWeaponIndex(View view){
+        Intent intent = new Intent(this, WeaponsIndex.class);
+        intent.putExtra(EXTRA_INTEGER, 3);
+        startActivity(intent);
+    }
 }

@@ -13,8 +13,8 @@ import domain.Perks;
 public class UncommonWeapon extends Weapon implements Serializable{
     private Perks perks;
 
-    public UncommonWeapon(String name, String type, String attack, int image, WeaponAttributes attributes, Perks perks) {
-        super(name, type, attack, image, Elements.cinetic, attributes);
+    public UncommonWeapon(String name, String type, String attack, int image, Elements element,WeaponAttributes attributes, Perks perks) {
+        super(name, type, attack, image, element, attributes);
         this.perks = perks;
     }
 

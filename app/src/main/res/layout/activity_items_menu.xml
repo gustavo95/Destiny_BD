@@ -36,7 +36,8 @@
         android:shadowColor="@android:color/background_dark"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="12" />
+        android:shadowRadius="12"
+        android:onClick="openSpecialWeaponIndex"/>
 
     <Button
         android:id="@+id/ButtonHeavyWeapons"
@@ -52,7 +53,8 @@
         android:shadowColor="@android:color/background_dark"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="12" />
+        android:shadowRadius="12"
+        android:onClick="openHeavyWeaponIndex" />
 
     <Button
         android:id="@+id/ButtonWarlockArmor"

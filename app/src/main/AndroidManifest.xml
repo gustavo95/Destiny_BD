@@ -28,7 +28,7 @@
         </activity>
         <activity
             android:name=".WeaponsIndex"
-            android:label="@string/primaryWeapons"
+            android:label="@string/title_activity_items_menu"
             android:parentActivityName=".ItemsMenu"
             android:screenOrientation="portrait" >
             <meta-data
@@ -37,7 +37,7 @@
         </activity>
         <activity
             android:name=".WeaponScreen"
-            android:label="@string/title_activity_weapon_screen"
+            android:label="@string/title_activity_items_menu"
             android:parentActivityName=".WeaponsIndex"
             android:screenOrientation="portrait" >
             <meta-data

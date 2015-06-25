@@ -16,7 +16,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import domain.ItemsLists.HeavyWeaponsList;
 import domain.ItemsLists.PrimaryWeaponsList;
+import domain.ItemsLists.SpecialWeaponsList;
 import domain.weapons.Weapon;
 
 
@@ -33,7 +35,15 @@ public class WeaponsIndex extends Activity {
 
         if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 1) == 1){
             PrimaryWeaponsList weapons = new PrimaryWeaponsList();
-            primaryWeaponsButtons(weapons.getWeapons());
+            weaponsButtons(weapons.getWeapons());
+        }
+        else if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 2) == 2) {
+            SpecialWeaponsList weapons = new SpecialWeaponsList();
+            weaponsButtons(weapons.getWeapons());
+        }
+        else if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 3) == 3) {
+            HeavyWeaponsList weapons = new HeavyWeaponsList();
+            weaponsButtons(weapons.getWeapons());
         }
     }
 
@@ -70,7 +80,7 @@ public class WeaponsIndex extends Activity {
         super.onDestroy();
     }
 
-    private void primaryWeaponsButtons(List<Weapon> weaponsList){
+    private void weaponsButtons(List<Weapon> weaponsList){
         Float f;
 
         ImageButton image;

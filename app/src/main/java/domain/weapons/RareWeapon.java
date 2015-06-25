@@ -13,8 +13,8 @@ import domain.Perks;
 public class RareWeapon extends Weapon implements Serializable {
     private Perks perks;
 
-    public RareWeapon(String name, String type, String attack, int image, WeaponAttributes attributes) {
-        super(name, type, attack, image, Elements.cinetic, attributes);
+    public RareWeapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes) {
+        super(name, type, attack, image, element, attributes);
         this.perks = new Perks("Essa arma possui um aprimoramento aleatorio",null,null);
     }
 
