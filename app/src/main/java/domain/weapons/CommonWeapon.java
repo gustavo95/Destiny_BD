@@ -11,7 +11,7 @@ import domain.Elements;
  */
 public class CommonWeapon extends Weapon implements Serializable{
     public CommonWeapon(String name, String type, String attack, int image, WeaponAttributes attributes) {
-        super(name, type, attack, image, Elements.cinetic, attributes);
+        super(name, type, attack, image, Elements.kinetic, attributes);
     }
 
     @Override

@@ -39,16 +39,6 @@ public class MainMenu extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onStop(){
-        super.onStop();
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-    }
-
     public void openItemsMenu(View view){
         Intent intent = new Intent(this, ItemsMenu.class);
         startActivity(intent);

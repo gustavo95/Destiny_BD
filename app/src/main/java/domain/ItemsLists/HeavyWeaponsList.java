@@ -55,7 +55,7 @@ public class HeavyWeaponsList {
         String reforge = "O Armeiro pode reforjar esta arma mudando os aprimoramentos disponiveis";
 
         weapons.add(new LegendaryWeapon("Admoestador III", lFoguete, "248/365",
-                R.drawable.admonisher_iii, Elements.radom,
+                R.drawable.admonisher_iii, Elements.random,
                 new WeaponAttributes(18, 96, 30, 53, 57, 1), "?",
                 new Perks(randomPerk2, null, null)));
     }
@@ -63,7 +63,7 @@ public class HeavyWeaponsList {
     private void insertRares(){
 
         weapons.add(new RareWeapon("Affentheater C/L-A", lFoguete, "224/242",
-                R.drawable.affentheater_cla, Elements.radom,
+                R.drawable.affentheater_cla, Elements.random,
                 new WeaponAttributes(11, 67, 68, 45, 64, 2)));
     }
 
@@ -73,7 +73,7 @@ public class HeavyWeaponsList {
         Perks p1 = new Perks("Essa arma possui um aprimoramento aleatorio", null, null);
 
         weapons.add(new UncommonWeapon("BTRD-345", metralhadora, "89",
-                R.drawable.btrd_345, Elements.cinetic,
+                R.drawable.btrd_345, Elements.kinetic,
                 new WeaponAttributes(26, 22, 66, 41, 52, 4), p0));
     }
 

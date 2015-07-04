@@ -42,19 +42,19 @@ public class PrimaryWeaponsList {
     private void insertExotics(){
 
         weapons.add(new ExoticWeapon("347 Vesta Dynasty", fBatedor, "365",
-                R.drawable.vesta_dynasty_347, Elements.cinetic,
+                R.drawable.vesta_dynasty_347, Elements.kinetic,
                 new WeaponAttributes(37, 48, 61, 53, 69, 19), "?",
                 new Perks("Maior precisão enquanto estiver no ar.",
                         "Precision kills temporarily increase Agility stat for 15 seconds.",
                         "Non precision kills temporarily increase Armor stat for 15 seconds.")));
         weapons.add(new ExoticWeapon("Vodu do Jacu", fPulso, "302/365",
-                R.drawable.bad_juju, Elements.cinetic,
+                R.drawable.bad_juju, Elements.kinetic,
                 new WeaponAttributes(73, 7, 30, 54, 65, 24), "?",
                 new Perks("Esta arma tem um bônus de precisão ao efetuar tiro livre.",
                         "Após cada baixa, esta arma recarregará instantaneamente e o dano será aumentado brevemente."
                         + " Baixas ajudarão a carregar a sua super habilidade",null)));
         weapons.add(new ExoticWeapon("Destino de todos os tolos", fBatedor, "331/365",
-                R.drawable.fate_of_all_fools, Elements.cinetic,
+                R.drawable.fate_of_all_fools, Elements.kinetic,
                 new WeaponAttributes(27, 59, 94, 24, 65, 13), "?",
                 new Perks("Causar dano com esta arma aumenta a sua estabilidade",
                         "Chain body shots to gain bonus damage on your next precision shot.",null)));
@@ -68,11 +68,11 @@ public class PrimaryWeaponsList {
         String reforge = "O Armeiro pode reforjar esta arma mudando os aprimoramentos disponiveis";
 
         weapons.add(new LegendaryWeapon("123 SYZYGY", fPulso, "272/365",
-                R.drawable.syzygy_123, Elements.cinetic,
+                R.drawable.syzygy_123, Elements.kinetic,
                 new WeaponAttributes(77, 4, 25, 64, 48, 30), "?",
                 new Perks(randomPerk2, null, null)));
         weapons.add(new LegendaryWeapon("todoDESTINO-55A", fPulso, "331/365",
-                R.drawable.allfate_55a, Elements.cinetic,
+                R.drawable.allfate_55a, Elements.kinetic,
                 new WeaponAttributes(66, 14, 47, 65, 62, 27), "?",
                 new Perks(randomPerk2, reforge, null)));
     }
@@ -80,7 +80,7 @@ public class PrimaryWeaponsList {
     private void insertRares(){
 
         weapons.add(new RareWeapon("A Little Voice", cMao, "224/242",
-                R.drawable.a_little_voice, Elements.cinetic,
+                R.drawable.a_little_voice, Elements.kinetic,
                 new WeaponAttributes(15, 94, 34, 26, 26, 7)));
     }
 
@@ -90,7 +90,7 @@ public class PrimaryWeaponsList {
         Perks p1 = new Perks("Essa arma possui um aprimoramento aleatorio", null, null);
 
         weapons.add(new UncommonWeapon("Bandit Mk. 36", cMao, "81/89",
-                R.drawable.bandit_mk_36, Elements.cinetic,
+                R.drawable.bandit_mk_36, Elements.kinetic,
                 new WeaponAttributes(22, 81, 17, 38, 26, 8), p1));
     }
 

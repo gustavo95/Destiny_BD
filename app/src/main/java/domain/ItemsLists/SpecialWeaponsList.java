@@ -57,7 +57,7 @@ public class SpecialWeaponsList {
         String reforge = "O Armeiro pode reforjar esta arma mudando os aprimoramentos disponiveis";
 
         weapons.add(new LegendaryWeapon("20/20 AMR7", fPrecisao, "331/365",
-                R.drawable.amr7_2020, Elements.radom,
+                R.drawable.amr7_2020, Elements.random,
                 new WeaponAttributes(43, 10, 63, 32, 79, 4), "?",
                 new Perks(randomPerk2, reforge, null)));
     }
@@ -65,7 +65,7 @@ public class SpecialWeaponsList {
     private void insertRares(){
 
         weapons.add(new RareWeapon("Agnes III", escopeta, "224/242",
-                R.drawable.agnes_iii, Elements.radom,
+                R.drawable.agnes_iii, Elements.random,
                 new WeaponAttributes(5, 67, 21, 2, 20, 5)));
     }
 
@@ -75,7 +75,7 @@ public class SpecialWeaponsList {
         Perks p1 = new Perks("Essa arma possui um aprimoramento aleatorio", null, null);
 
         weapons.add(new UncommonWeapon("13098v incognito", fPrecisao, "60",
-                R.drawable.incognito_13098v, Elements.radom,
+                R.drawable.incognito_13098v, Elements.random,
                 new WeaponAttributes(26, 22, 66, 41, 52, 4), p0));
     }
 

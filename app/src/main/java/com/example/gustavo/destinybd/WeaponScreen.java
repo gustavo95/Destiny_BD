@@ -2,10 +2,18 @@ package com.example.gustavo.destinybd;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
+import domain.Elements;
 import domain.weapons.Weapon;
 
 
@@ -18,7 +26,7 @@ public class WeaponScreen extends Activity {
 
         Intent intent = getIntent();
 
-        createInterface((Weapon) intent.getSerializableExtra(WeaponsIndex.EXTRA_WEAPON));
+        weaponLayout((Weapon) intent.getSerializableExtra(WeaponsIndex.EXTRA_WEAPON));
     }
 
 
@@ -44,7 +52,74 @@ public class WeaponScreen extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void createInterface(Weapon weapon){
-        System.out.println(weapon.getName());
+    private void weaponLayout(Weapon weapon){
+
+        TableLayout tl = (TableLayout) findViewById(R.id.tableWeapon);
+        int lHeight = RelativeLayout.LayoutParams.FILL_PARENT;
+        int lWidth = RelativeLayout.LayoutParams.WRAP_CONTENT;
+
+        TableRow tr;
+        Float f = new Float(0.75);
+
+        tr = new TableRow(this);
+        tr.setBackgroundColor(weapon.color());
+
+        ImageButton image = new ImageButton(this);
+        image.setImageDrawable(getResources().getDrawable(weapon.getImage()));
+        image.setBackgroundColor(Color.TRANSPARENT);
+        image.setScaleX(f);
+        image.setScaleY(f);
+        tr.addView(image);
+
+        Button name = new Button(this);
+        name.setText("\n" + weapon.getName() + "\n" + weapon.getType());
+        name.setTextSize(16);
+        name.setBackgroundColor(Color.TRANSPARENT);
+        tr.addView(name);
+
+        tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
+
+        tr = new TableRow(this);
+
+        attackLayout(tr, weapon);
+
+        tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
+    }
+
+    private void attackLayout(TableRow tr, Weapon weapon){
+        ImageButton damage = new ImageButton(this);
+        damage.setBackgroundColor(Color.TRANSPARENT);
+
+        TextView attack = new TextView(this);
+        attack.setTextSize(16);
+        attack.setText("\n\t\tAtaque: " + weapon.getAttack());
+
+        if(weapon.getElement() == Elements.kinetic){
+            damage.setImageDrawable(getResources().getDrawable(R.drawable.kinetic_damage));
+            attack.setTextColor(Color.WHITE);
+        }
+        if(weapon.getElement() == Elements.solar){
+            damage.setImageDrawable(getResources().getDrawable(R.drawable.solar_damage));
+            attack.setTextColor(Color.rgb(245, 124, 43));
+        }
+        if(weapon.getElement() == Elements.arc){
+            damage.setImageDrawable(getResources().getDrawable(R.drawable.arc_damage));
+            attack.setTextColor(Color.rgb(132, 191, 232));
+        }
+        if(weapon.getElement() == Elements.vacuo){
+            damage.setImageDrawable(getResources().getDrawable(R.drawable.void_damage));
+            attack.setTextColor(Color.rgb(190, 147, 216));
+        }
+        if(weapon.getElement() == Elements.random){
+            damage.setImageDrawable(getResources().getDrawable(R.drawable.multiple_damage_black));
+            attack.setTextColor(Color.WHITE);
+        }
+
+        Float f = new Float(0.70);
+        damage.setScaleX(f);
+        damage.setScaleY(f);
+
+        tr.addView(attack);
+        tr.addView(damage);
     }
 }

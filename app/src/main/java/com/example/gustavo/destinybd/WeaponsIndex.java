@@ -70,18 +70,8 @@ public class WeaponsIndex extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onStop(){
-        super.onStop();
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-    }
-
     private void weaponsButtons(List<Weapon> weaponsList){
-        Float f;
+        Float f = new Float(0.75);
 
         ImageButton image;
         Button name;
@@ -89,7 +79,7 @@ public class WeaponsIndex extends Activity {
 
         TableRow tr;
         TableLayout tl = (TableLayout) findViewById(R.id.tableIndex);
-        int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lHeight = RelativeLayout.LayoutParams.FILL_PARENT;
         int lWidth = RelativeLayout.LayoutParams.WRAP_CONTENT;
 
         try {
@@ -102,7 +92,6 @@ public class WeaponsIndex extends Activity {
                 image = new ImageButton(this);
                 image.setImageDrawable(getResources().getDrawable(w.getImage()));
                 image.setBackgroundColor(Color.TRANSPARENT);
-                f = new Float(0.75);
                 image.setScaleX(f);
                 image.setScaleY(f);
                 image.setOnClickListener(new View.OnClickListener() {
@@ -117,13 +106,14 @@ public class WeaponsIndex extends Activity {
                 name.setTextSize(16);
                 name.setText("\n" + w.getName() + "\n" + w.getType() + "\nAtaque: " + w.getAttack());
                 name.setBackgroundColor(Color.TRANSPARENT);
-                image.setOnClickListener(new View.OnClickListener() {
+                name.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         openWeaponScreen(weapon);
                     }
                 });
                 tr.addView(name);
+
 
                 tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
 
