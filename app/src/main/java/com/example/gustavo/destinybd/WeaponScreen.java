@@ -2,8 +2,13 @@ package com.example.gustavo.destinybd;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ImageSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -73,7 +78,12 @@ public class WeaponScreen extends Activity {
 
         Button name = new Button(this);
         name.setText("\n" + weapon.getName() + "\n" + weapon.getType());
-        name.setTextSize(16);
+        if(weapon.getName().length() >= 20){
+            name.setTextSize(13);
+        }
+        else{
+            name.setTextSize(16);
+        }
         name.setBackgroundColor(Color.TRANSPARENT);
         tr.addView(name);
 
@@ -87,39 +97,41 @@ public class WeaponScreen extends Activity {
     }
 
     private void attackLayout(TableRow tr, Weapon weapon){
-        ImageButton damage = new ImageButton(this);
-        damage.setBackgroundColor(Color.TRANSPARENT);
+
+        SpannableStringBuilder ssb = new SpannableStringBuilder("\n\tAtaque:   " + weapon.getAttack());
 
         TextView attack = new TextView(this);
         attack.setTextSize(16);
-        attack.setText("\n\t\tAtaque: " + weapon.getAttack());
 
         if(weapon.getElement() == Elements.kinetic){
-            damage.setImageDrawable(getResources().getDrawable(R.drawable.kinetic_damage));
             attack.setTextColor(Color.WHITE);
+            Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.kinetic_damage);
+            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.solar){
-            damage.setImageDrawable(getResources().getDrawable(R.drawable.solar_damage));
             attack.setTextColor(Color.rgb(245, 124, 43));
+            Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.solar_damage);
+            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.arc){
-            damage.setImageDrawable(getResources().getDrawable(R.drawable.arc_damage));
             attack.setTextColor(Color.rgb(132, 191, 232));
+            Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.arc_damage);
+            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.vacuo){
-            damage.setImageDrawable(getResources().getDrawable(R.drawable.void_damage));
             attack.setTextColor(Color.rgb(190, 147, 216));
+            Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.void_damage);
+            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.random){
-            damage.setImageDrawable(getResources().getDrawable(R.drawable.multiple_damage_black));
             attack.setTextColor(Color.WHITE);
+            Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.multiple_damage_black);
+            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
 
-        Float f = new Float(0.70);
-        damage.setScaleX(f);
-        damage.setScaleY(f);
+        attack.setText(ssb, TextView.BufferType.SPANNABLE);
 
         tr.addView(attack);
-        tr.addView(damage);
+
     }
 }

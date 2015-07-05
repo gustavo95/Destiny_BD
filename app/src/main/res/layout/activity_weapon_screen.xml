@@ -15,7 +15,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:scrollbars="horizontal"
-            android:shrinkColumns="0" />
+            android:shrinkColumns="0"/>
     </ScrollView>
 
 
