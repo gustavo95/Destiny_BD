@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -59,9 +61,9 @@ public class WeaponScreen extends Activity {
 
     private void weaponLayout(Weapon weapon){
 
-        TableLayout tl = (TableLayout) findViewById(R.id.tableWeapon);
-        int lHeight = RelativeLayout.LayoutParams.FILL_PARENT;
-        int lWidth = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        TableLayout tl = (TableLayout) findViewById(R.id.tableWeapon1);
+        int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lWidth = RelativeLayout.LayoutParams.FILL_PARENT;
 
         TableRow tr;
         Float f = new Float(0.75);
@@ -87,13 +89,15 @@ public class WeaponScreen extends Activity {
         name.setBackgroundColor(Color.TRANSPARENT);
         tr.addView(name);
 
-        tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tl = (TableLayout) findViewById(R.id.tableWeapon2);
 
         tr = new TableRow(this);
-
         attackLayout(tr, weapon);
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
-        tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
+        attributesLayout(tl, weapon);
     }
 
     private void attackLayout(TableRow tr, Weapon weapon){
@@ -133,5 +137,70 @@ public class WeaponScreen extends Activity {
 
         tr.addView(attack);
 
+    }
+
+    private void attributesLayout(TableLayout tl, Weapon weapon){
+        int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lWidth = RelativeLayout.LayoutParams.FILL_PARENT;
+
+        TableRow tr = new TableRow(this);
+        TextView tv = new TextView(this);
+        tv.setText("\n\tAtributos:");
+        tv.setTextSize(16);
+        tv.setTextColor(Color.WHITE);
+        tr.addView(tv);
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        attributeBar(tr, "Cadência:", weapon.getAttributes().getRateFire());
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        attributeBar(tr, "Impacto:", weapon.getAttributes().getImpact());
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        attributeBar(tr, "Alcance:", weapon.getAttributes().getRange());
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        attributeBar(tr, "Estabilidade:", weapon.getAttributes().getStability());
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        attributeBar(tr, "Recarga:", weapon.getAttributes().getReload());
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        TextView mag = new TextView(this);
+        Integer i = new Integer(weapon.getAttributes().getMag());
+        mag.setText("\t\tCarregador: \t" + i.toString());
+        mag.setTextSize(15);
+        mag.setTextColor(Color.WHITE);
+        tr.addView(mag);
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+    }
+
+    private void attributeBar(TableRow tr, String attributeName, int attributeValue){
+        TextView tv = new TextView(this);
+        tv.setText("\t\t" + attributeName);
+        tv.setTextSize(15);
+        tv.setTextColor(Color.WHITE);
+        tr.addView(tv);
+
+        ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
+        bar.setIndeterminate(false);
+        bar.getIndeterminateDrawable().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+        bar.getProgressDrawable().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+        bar.setMax(100);
+        bar.setProgress(attributeValue);
+        bar.setScaleY(3);
+        tr.addView(bar);
+
+        tv = new TextView(this);
+        tv.setText("\t" + attributeValue);
+        tv.setTextSize(15);
+        tv.setTextColor(Color.WHITE);
+        tr.addView(tv);
     }
 }

@@ -79,8 +79,8 @@ public class WeaponsIndex extends Activity {
 
         TableRow tr;
         TableLayout tl = (TableLayout) findViewById(R.id.tableIndex);
-        int lHeight = RelativeLayout.LayoutParams.FILL_PARENT;
-        int lWidth = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lWidth =  RelativeLayout.LayoutParams.FILL_PARENT;
 
         try {
             for (Weapon w : weaponsList) {
@@ -115,14 +115,14 @@ public class WeaponsIndex extends Activity {
                 tr.addView(name);
 
 
-                tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
+                tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
                 tr = new TableRow(this);
                 nothing = new TextView(this);
                 nothing.setTextSize(1);
                 nothing.setText("");
                 tr.addView(nothing);
-                tl.addView(tr, new RelativeLayout.LayoutParams(lHeight, lWidth));
+                tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
             }
         }catch (Exception E){
             System.err.println("Erro!");

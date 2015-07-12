@@ -38,7 +38,7 @@
         <activity
             android:name=".WeaponScreen"
             android:label="@string/title_activity_items_menu"
-            android:parentActivityName=".WeaponsIndex"
+            android:parentActivityName=".ItemsMenu"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
