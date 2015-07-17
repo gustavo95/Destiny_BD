@@ -80,23 +80,18 @@ public class WeaponScreen extends Activity {
 
         Button name = new Button(this);
         name.setText("\n" + weapon.getName() + "\n" + weapon.getType());
-        if(weapon.getName().length() >= 20){
-            name.setTextSize(13);
-        }
-        else{
-            name.setTextSize(16);
-        }
+        name.setTextSize(16);
         name.setBackgroundColor(Color.TRANSPARENT);
         tr.addView(name);
 
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tl = (TableLayout) findViewById(R.id.tableWeapon2);
-
         tr = new TableRow(this);
         attackLayout(tr, weapon);
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
+        tl = (TableLayout) findViewById(R.id.tableWeapon3);
         attributesLayout(tl, weapon);
     }
 
@@ -145,36 +140,36 @@ public class WeaponScreen extends Activity {
 
         TableRow tr = new TableRow(this);
         TextView tv = new TextView(this);
-        tv.setText("\n\tAtributos:");
+        tv.setText("\tAtributos:");
         tv.setTextSize(16);
         tv.setTextColor(Color.WHITE);
         tr.addView(tv);
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Cadência:", weapon.getAttributes().getRateFire());
+        attributeBar(tr, "Cadência:     \t", weapon.getAttributes().getRateFire());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Impacto:", weapon.getAttributes().getImpact());
+        attributeBar(tr, "Impacto:     \t", weapon.getAttributes().getImpact());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Alcance:", weapon.getAttributes().getRange());
+        attributeBar(tr, "Alcance:     \t", weapon.getAttributes().getRange());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Estabilidade:", weapon.getAttributes().getStability());
+        attributeBar(tr, "Estabilidade:     \t", weapon.getAttributes().getStability());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Recarga:", weapon.getAttributes().getReload());
+        attributeBar(tr, "Recarga:     \t", weapon.getAttributes().getReload());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
         TextView mag = new TextView(this);
         Integer i = new Integer(weapon.getAttributes().getMag());
-        mag.setText("\t\tCarregador: \t" + i.toString());
+        mag.setText("\t\tCarregador:  " + i.toString());
         mag.setTextSize(15);
         mag.setTextColor(Color.WHITE);
         tr.addView(mag);
@@ -182,6 +177,8 @@ public class WeaponScreen extends Activity {
     }
 
     private void attributeBar(TableRow tr, String attributeName, int attributeValue){
+        tr.setWeightSum(1);
+
         TextView tv = new TextView(this);
         tv.setText("\t\t" + attributeName);
         tv.setTextSize(15);
@@ -194,11 +191,12 @@ public class WeaponScreen extends Activity {
         bar.getProgressDrawable().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
         bar.setMax(100);
         bar.setProgress(attributeValue);
-        bar.setScaleY(3);
+        bar.setScaleY(new Float(2.5));
+        bar.setScaleX(new Float(1.5));
         tr.addView(bar);
 
         tv = new TextView(this);
-        tv.setText("\t" + attributeValue);
+        tv.setText("\t\t" + attributeValue + "                       ");
         tv.setTextSize(15);
         tv.setTextColor(Color.WHITE);
         tr.addView(tv);
