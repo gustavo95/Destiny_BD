@@ -93,6 +93,11 @@ public class WeaponScreen extends Activity {
 
         tl = (TableLayout) findViewById(R.id.tableWeapon3);
         attributesLayout(tl, weapon);
+
+        if(weapon.getPerks() != null){
+            tl = (TableLayout) findViewById(R.id.tableWeapon3);
+            perksLayout(tl, weapon);
+        }
     }
 
     private void attackLayout(TableRow tr, Weapon weapon){
@@ -147,23 +152,33 @@ public class WeaponScreen extends Activity {
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Cadência:     \t", weapon.getAttributes().getRateFire());
+        if(weapon.getType().contentEquals("Fuzil de Fusão")){
+            attributeBar(tr, "Carga: ", weapon.getAttributes().getRateFire());
+        }
+        else{
+            attributeBar(tr, "Cadência: ", weapon.getAttributes().getRateFire());
+        }
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Impacto:     \t", weapon.getAttributes().getImpact());
+        if(weapon.getType().contentEquals("Lança-foguetes")){
+            attributeBar(tr, "Explosão: ", weapon.getAttributes().getImpact());
+        }
+        else {
+            attributeBar(tr, "Impacto: ", weapon.getAttributes().getImpact());
+        }
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Alcance:     \t", weapon.getAttributes().getRange());
+        attributeBar(tr, "Alcance: ", weapon.getAttributes().getRange());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Estabilidade:     \t", weapon.getAttributes().getStability());
+        attributeBar(tr, "Estabilidade: ", weapon.getAttributes().getStability());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Recarga:     \t", weapon.getAttributes().getReload());
+        attributeBar(tr, "Recarga: ", weapon.getAttributes().getReload());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
@@ -200,5 +215,46 @@ public class WeaponScreen extends Activity {
         tv.setTextSize(15);
         tv.setTextColor(Color.WHITE);
         tr.addView(tv);
+    }
+
+    private void perksLayout(TableLayout tl, Weapon weapon){
+        int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lWidth = RelativeLayout.LayoutParams.FILL_PARENT;
+
+        TableRow tr = new TableRow(this);
+        TextView tv = new TextView(this);
+        tv.setText("\tVantagens Principais:");
+        tv.setTextSize(16);
+        tv.setTextColor(Color.WHITE);
+        tr.addView(tv);
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        tv = new TextView(this);
+        tv.setText("\t\t" + weapon.getPerks().getPerk1());
+        tv.setTextSize(15);
+        tv.setTextColor(Color.WHITE);
+        tr.addView(tv);
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        if(weapon.getPerks().getPerk2() != null){
+            tr = new TableRow(this);
+            tv = new TextView(this);
+            tv.setText("\t\t" + weapon.getPerks().getPerk2());
+            tv.setTextSize(15);
+            tv.setTextColor(Color.WHITE);
+            tr.addView(tv);
+            tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+        }
+
+        if(weapon.getPerks().getPerk3() != null){
+            tr = new TableRow(this);
+            tv = new TextView(this);
+            tv.setText("\t\t" + weapon.getPerks().getPerk3());
+            tv.setTextSize(15);
+            tv.setTextColor(Color.WHITE);
+            tr.addView(tv);
+            tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+        }
     }
 }

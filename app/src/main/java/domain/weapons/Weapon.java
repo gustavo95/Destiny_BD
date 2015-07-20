@@ -3,6 +3,7 @@ package domain.weapons;
 import java.io.Serializable;
 
 import domain.Elements;
+import domain.Perks;
 
 /**
  * Created by Gustavo on 06/06/2015
@@ -15,14 +16,18 @@ public abstract class Weapon implements Serializable {
     private int image;
     private Elements element;
     private WeaponAttributes attributes;
+    private String location;
+    private Perks perks;
 
-    public Weapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes) {
+    public Weapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes, String Location, Perks perks) {
         this.name = name;
         this.type = type;
         this.attack = attack;
         this.image = image;
         this.element = element;
         this.attributes = attributes;
+        this.location = location;
+        this.perks = perks;
     }
 
     public String getName() {
@@ -47,6 +52,14 @@ public abstract class Weapon implements Serializable {
 
     public WeaponAttributes getAttributes() {
         return attributes;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public Perks getPerks() {
+        return perks;
     }
 
     public abstract int color();

@@ -7,8 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import domain.ItemsLists.PrimaryWeaponsList;
-
 public class ItemsMenu extends Activity {
     public final static String EXTRA_INTEGER = "com.example.gustavo.destinybd.INTEGER";
 

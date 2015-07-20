@@ -7,28 +7,39 @@
     android:background="@drawable/wallpaper"
     tools:context="com.example.gustavo.destinybd.WeaponScreen">
 
-        <TableLayout
-            android:id="@+id/tableWeapon1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="horizontal"
-            android:shrinkColumns="0"/>
+    <TableLayout
+        android:id="@+id/tableWeapon1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:shrinkColumns="2"/>
 
     <TableLayout
-            android:id="@+id/tableWeapon2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tableWeapon1"
-            android:scrollbars="horizontal"
-            android:shrinkColumns="0"/>
+        android:id="@+id/tableWeapon2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableWeapon1"
+        android:scrollbars="horizontal"
+        android:shrinkColumns="1"/>
 
+    <TableLayout
+        android:id="@+id/tableWeapon3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableWeapon2"
+        android:scrollbars="horizontal"
+        android:shrinkColumns="0"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        android:layout_below="@+id/tableWeapon3"
         <TableLayout
-            android:id="@+id/tableWeapon3"
+            android:id="@+id/tableWeapon4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tableWeapon2"
-            android:scrollbars="horizontal"
-            android:shrinkColumns="0"/>
+            android:scrollbars="horizontal"/>
+    </ScrollView>
 
 
 </RelativeLayout>

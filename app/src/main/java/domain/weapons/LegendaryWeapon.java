@@ -10,22 +10,10 @@ import domain.Perks;
 /**
  * Created by Gustavo on 07/06/2015
  */
-public class LegendaryWeapon extends Weapon implements Serializable{
-    private String location;
-    private Perks perks;
+public class LegendaryWeapon extends Weapon implements Serializable{;
 
     public LegendaryWeapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes, String location, Perks perks) {
-        super(name, type, attack, image, element, attributes);
-        this.location = location;
-        this.perks = perks;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public Perks getPerks() {
-        return perks;
+        super(name, type, attack, image, element, attributes, location, perks);
     }
 
     @Override

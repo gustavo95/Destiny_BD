@@ -1,4 +1,4 @@
-package domain.ItemsLists;
+package domain.WeaponsLists;
 
 import com.example.gustavo.destinybd.R;
 
@@ -50,9 +50,9 @@ public class HeavyWeaponsList {
 
     private void insertLegendarys(){
 
-        String randomPerk1 = "Essa arma possui um aprimoramento aleatorio";
-        String randomPerk2 = "Essa arma possui dois aprimoramentos aleatorios";
-        String reforge = "O Armeiro pode reforjar esta arma mudando os aprimoramentos disponiveis";
+        String randomPerk1 = "Essa arma possui uma vantagem aleatoria";
+        String randomPerk2 = "Essa arma possui duas vantagens aleatorias";
+        String reforge = "O Armeiro pode reforjar esta arma mudando as vantagens disponiveis";
 
         weapons.add(new LegendaryWeapon("Admoestador III", lFoguete, "248/365",
                 R.drawable.admonisher_iii, Elements.random,
@@ -70,7 +70,7 @@ public class HeavyWeaponsList {
     private void insertUncommons(){
 
         Perks p0 = null;
-        Perks p1 = new Perks("Essa arma possui um aprimoramento aleatorio", null, null);
+        Perks p1 = new Perks("Essa arma possui uma vantagem aleatoria", null, null);
 
         weapons.add(new UncommonWeapon("BTRD-345", metralhadora, "89",
                 R.drawable.btrd_345, Elements.kinetic,
