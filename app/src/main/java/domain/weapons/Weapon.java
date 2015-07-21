@@ -19,7 +19,7 @@ public abstract class Weapon implements Serializable {
     private String location;
     private Perks perks;
 
-    public Weapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes, String Location, Perks perks) {
+    public Weapon(String name, String type, String attack, int image, Elements element, WeaponAttributes attributes, String location, Perks perks) {
         this.name = name;
         this.type = type;
         this.attack = attack;

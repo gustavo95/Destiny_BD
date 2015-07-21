@@ -95,8 +95,13 @@ public class WeaponScreen extends Activity {
         attributesLayout(tl, weapon);
 
         if(weapon.getPerks() != null){
-            tl = (TableLayout) findViewById(R.id.tableWeapon3);
+            tl = (TableLayout) findViewById(R.id.tableWeapon4);
             perksLayout(tl, weapon);
+        }
+
+        if(weapon.getLocation() != null){
+            tl = (TableLayout) findViewById(R.id.tableWeapon4);
+            locationLayout(tl, weapon);
         }
     }
 
@@ -192,7 +197,6 @@ public class WeaponScreen extends Activity {
     }
 
     private void attributeBar(TableRow tr, String attributeName, int attributeValue){
-        tr.setWeightSum(1);
 
         TextView tv = new TextView(this);
         tv.setText("\t\t" + attributeName);
@@ -232,7 +236,7 @@ public class WeaponScreen extends Activity {
         tr = new TableRow(this);
         tv = new TextView(this);
         tv.setText("\t\t" + weapon.getPerks().getPerk1());
-        tv.setTextSize(15);
+        tv.setTextSize(14);
         tv.setTextColor(Color.WHITE);
         tr.addView(tv);
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
@@ -241,7 +245,7 @@ public class WeaponScreen extends Activity {
             tr = new TableRow(this);
             tv = new TextView(this);
             tv.setText("\t\t" + weapon.getPerks().getPerk2());
-            tv.setTextSize(15);
+            tv.setTextSize(14);
             tv.setTextColor(Color.WHITE);
             tr.addView(tv);
             tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
@@ -251,10 +255,31 @@ public class WeaponScreen extends Activity {
             tr = new TableRow(this);
             tv = new TextView(this);
             tv.setText("\t\t" + weapon.getPerks().getPerk3());
-            tv.setTextSize(15);
+            tv.setTextSize(14);
             tv.setTextColor(Color.WHITE);
             tr.addView(tv);
             tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
         }
+    }
+
+    private void locationLayout(TableLayout tl, Weapon weapon){
+        int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;
+        int lWidth = RelativeLayout.LayoutParams.FILL_PARENT;
+
+        TableRow tr = new TableRow(this);
+        TextView tv = new TextView(this);
+        tv.setText("\tOnde encontrar:");
+        tv.setTextSize(16);
+        tv.setTextColor(Color.WHITE);
+        tr.addView(tv);
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
+
+        tr = new TableRow(this);
+        tv = new TextView(this);
+        tv.setText("\t\t" + weapon.getLocation());
+        tv.setTextSize(14);
+        tv.setTextColor(Color.WHITE);
+        tr.addView(tv);
+        tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
     }
 }
