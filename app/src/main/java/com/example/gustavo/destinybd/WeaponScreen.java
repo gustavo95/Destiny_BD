@@ -107,7 +107,12 @@ public class WeaponScreen extends Activity {
 
     private void attackLayout(TableRow tr, Weapon weapon){
 
-        SpannableStringBuilder ssb = new SpannableStringBuilder("\n\tAtaque:   " + weapon.getAttack());
+        TextView tv = new TextView(this);
+        tv.setTextSize(16);
+        tv.setText("\n\tAtaque: ");
+        tv.setTextColor(Color.rgb(206,174,51));
+
+        SpannableStringBuilder ssb = new SpannableStringBuilder("\n   " + weapon.getAttack());
 
         TextView attack = new TextView(this);
         attack.setTextSize(16);
@@ -115,31 +120,32 @@ public class WeaponScreen extends Activity {
         if(weapon.getElement() == Elements.kinetic){
             attack.setTextColor(Color.WHITE);
             Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.kinetic_damage);
-            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
+            ssb.setSpan( new ImageSpan(element), 2, 3, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.solar){
             attack.setTextColor(Color.rgb(245, 124, 43));
             Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.solar_damage);
-            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
+            ssb.setSpan( new ImageSpan(element), 2, 3, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.arc){
             attack.setTextColor(Color.rgb(132, 191, 232));
             Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.arc_damage);
-            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
+            ssb.setSpan( new ImageSpan(element), 2, 3, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.vacuo){
             attack.setTextColor(Color.rgb(190, 147, 216));
             Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.void_damage);
-            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
+            ssb.setSpan( new ImageSpan(element), 2, 3, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
         if(weapon.getElement() == Elements.random){
             attack.setTextColor(Color.WHITE);
             Bitmap element = BitmapFactory.decodeResource(getResources(), R.drawable.multiple_damage_black);
-            ssb.setSpan( new ImageSpan(element), 10, 11, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
+            ssb.setSpan( new ImageSpan(element), 2, 3, Spannable.SPAN_INCLUSIVE_INCLUSIVE );
         }
 
         attack.setText(ssb, TextView.BufferType.SPANNABLE);
 
+        tr.addView(tv);
         tr.addView(attack);
 
     }
@@ -152,38 +158,38 @@ public class WeaponScreen extends Activity {
         TextView tv = new TextView(this);
         tv.setText("\tAtributos:");
         tv.setTextSize(16);
-        tv.setTextColor(Color.WHITE);
+        tv.setTextColor(Color.rgb(206,174,51));
         tr.addView(tv);
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
         if(weapon.getType().contentEquals("Fuzil de Fusão")){
-            attributeBar(tr, "Carga: ", weapon.getAttributes().getRateFire());
+            attributeBar(tr, "Carga:   \t\t", weapon.getAttributes().getRateFire());
         }
         else{
-            attributeBar(tr, "Cadência: ", weapon.getAttributes().getRateFire());
+            attributeBar(tr, "Cadência:   \t\t", weapon.getAttributes().getRateFire());
         }
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
         if(weapon.getType().contentEquals("Lança-foguetes")){
-            attributeBar(tr, "Explosão: ", weapon.getAttributes().getImpact());
+            attributeBar(tr, "Explosão:   \t\t", weapon.getAttributes().getImpact());
         }
         else {
-            attributeBar(tr, "Impacto: ", weapon.getAttributes().getImpact());
+            attributeBar(tr, "Impacto:   \t\t", weapon.getAttributes().getImpact());
         }
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Alcance: ", weapon.getAttributes().getRange());
+        attributeBar(tr, "Alcance:   \t\t", weapon.getAttributes().getRange());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Estabilidade: ", weapon.getAttributes().getStability());
+        attributeBar(tr, "Estabilidade:   \t\t", weapon.getAttributes().getStability());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
-        attributeBar(tr, "Recarga: ", weapon.getAttributes().getReload());
+        attributeBar(tr, "Recarga:   \t", weapon.getAttributes().getReload());
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
         tr = new TableRow(this);
@@ -229,7 +235,7 @@ public class WeaponScreen extends Activity {
         TextView tv = new TextView(this);
         tv.setText("\tVantagens Principais:");
         tv.setTextSize(16);
-        tv.setTextColor(Color.WHITE);
+        tv.setTextColor(Color.rgb(206,174,51));
         tr.addView(tv);
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 
@@ -268,9 +274,9 @@ public class WeaponScreen extends Activity {
 
         TableRow tr = new TableRow(this);
         TextView tv = new TextView(this);
-        tv.setText("\tOnde encontrar:");
+        tv.setText("\tOnde encontrar: ");
         tv.setTextSize(16);
-        tv.setTextColor(Color.WHITE);
+        tv.setTextColor(Color.rgb(206,174,51));
         tr.addView(tv);
         tl.addView(tr, new RelativeLayout.LayoutParams(lWidth, lHeight));
 

@@ -56,4 +56,9 @@ public class ItemsMenu extends Activity {
         intent.putExtra(EXTRA_INTEGER, 3);
         startActivity(intent);
     }
+
+    public void openWarlockArmoMenu(View view){
+        Intent intent = new Intent(this, WarlockArmorMenu.class);
+        startActivity(intent);
+    }
 }

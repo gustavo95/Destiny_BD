@@ -43,7 +43,7 @@ public class SpecialWeaponsList {
 
         weapons.add(new ExoticWeapon("Promessa do Rebaixado", pistola, "365",
                 R.drawable.dregs_promise, Elements.arc,
-                new WeaponAttributes(100, 5, 41, 79, 86, 18), "Cifra Anciã",
+                new WeaponAttributes(100, 5, 41, 79, 86, 18), "Obtida ao completar o contrato exótico A Cifra Anciã.",
                 new Perks("Esta arma sempre tem munição quando você reaparece.",
                         "Balas elétricas de alto ricochete com aquisição de alvo aprimorada.",
                         null)));
@@ -58,7 +58,7 @@ public class SpecialWeaponsList {
 
         weapons.add(new LegendaryWeapon("20/20 AMR7", fPrecisao, "331/365",
                 R.drawable.amr7_2020, Elements.random,
-                new WeaponAttributes(43, 10, 63, 32, 79, 4), "?",
+                new WeaponAttributes(43, 10, 63, 32, 79, 4), "\"Este item pode ser encontrado em atividades do Anoitecer e em engramas.\"",
                 new Perks(randomPerk2, reforge, null)));
     }
 
@@ -81,7 +81,7 @@ public class SpecialWeaponsList {
 
     private void insertCommons(){
 
-        weapons.add(new CommonWeapon("Calcutta-LR1", fPrecisao, "43",
+        weapons.add(new CommonWeapon("Calcutá-LR1", fPrecisao, "43",
                 R.drawable.calcutta_lr1, new WeaponAttributes(43, 10, 60, 37, 65, 3)));
     }
 

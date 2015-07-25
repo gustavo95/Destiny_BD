@@ -41,7 +41,9 @@ public class HeavyWeaponsList {
 
         weapons.add(new ExoticWeapon("Bafo de Dragão", lFoguete, "302/365",
                 R.drawable.dragons_breath, Elements.solar,
-                new WeaponAttributes(18, 96, 30, 66, 52, 2), "?",
+                new WeaponAttributes(18, 96, 30, 66, 52, 2),
+                "Esse item pode ser encontrado em atividades do Anoitecer, engramas, incursões, na Prisão dos Anciões e no crisol. " +
+                        "Xûr, Agente dos Nove, às vezes vende este item na Torre..",
                 new Perks("O tubo de lançamento pode ter até três unidades.",
                         "Balas disparadas por esta arma deixam uma labareda solar ao detonarem.",
                         null)));
@@ -56,7 +58,8 @@ public class HeavyWeaponsList {
 
         weapons.add(new LegendaryWeapon("Admoestador III", lFoguete, "248/365",
                 R.drawable.admonisher_iii, Elements.random,
-                new WeaponAttributes(18, 96, 30, 53, 57, 1), "?",
+                new WeaponAttributes(18, 96, 30, 53, 57, 1), "O Intendente Hideo da Nova Monarquia às vezes vende este item na Torre. " +
+                "Pode ser encontrado em engramas.",
                 new Perks(randomPerk2, null, null)));
     }
 
@@ -79,7 +82,7 @@ public class HeavyWeaponsList {
 
     private void insertCommons(){
 
-        weapons.add(new CommonWeapon("Barão RS/1", lFoguete, "-",
-                R.drawable.baron_rs1, new WeaponAttributes(25, 60, 44, 33, 66, 2)));
+        weapons.add(new CommonWeapon("Barão RS/2a", lFoguete, "31",
+                R.drawable.baron_rs1, new WeaponAttributes(9, 76, 44, 41, 54, 1)));
     }
 }
