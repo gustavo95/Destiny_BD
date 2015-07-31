@@ -15,5 +15,8 @@
     <string name="hunter_armor">Armaduras de Caçador</string>
     <string name="titan_armor">Armaduras de Titã</string>
     <string name="helmet">Capacete</string>
+    <string name="arms">Manopla</string>
+    <string name="chest">Armadura de torso</string>
+    <string name="legs">Armadura de pernas</string>
 
 </resources>
