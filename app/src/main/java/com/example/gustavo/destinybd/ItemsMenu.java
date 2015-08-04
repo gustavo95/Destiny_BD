@@ -9,6 +9,7 @@ import android.view.View;
 
 public class ItemsMenu extends Activity {
     public final static String EXTRA_INTEGER = "com.example.gustavo.destinybd.INTEGER";
+    public final static String EXTRA_LIST = "com.example.gustavo.destinybd.LIST";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

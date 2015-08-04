@@ -5,24 +5,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import domain.armorsLists.WarlockHelmetsList;
+import domain.armorsLists.ArmorList;
 
-
-public class WarlockArmorMenu extends Activity {
+public class ArmorsIndex extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_warlock_armor_menu);
-    }
+        setContentView(R.layout.activity_armors_index);
 
+        Intent intent = getIntent();
+
+        ArmorList al = (ArmorList) intent.getSerializableExtra(ItemsMenu.EXTRA_LIST);
+        al.getArmors();
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_warlok_armor_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_armors_index, menu);
         return true;
     }
 
@@ -39,10 +42,5 @@ public class WarlockArmorMenu extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void openWarlockHemeltIdex(View view){
-        Intent intent = new Intent(this, ArmorsIndex.class);
-        intent.putExtra(ItemsMenu.EXTRA_LIST, new WarlockHelmetsList());
     }
 }

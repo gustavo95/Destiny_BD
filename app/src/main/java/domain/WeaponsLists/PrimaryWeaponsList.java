@@ -2,6 +2,7 @@ package domain.WeaponsLists;
 
 import com.example.gustavo.destinybd.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 

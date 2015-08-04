@@ -2,6 +2,7 @@ package domain.WeaponsLists;
 
 import com.example.gustavo.destinybd.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,8 +43,8 @@ public class HeavyWeaponsList {
         weapons.add(new ExoticWeapon("Bafo de Dragão", lFoguete, "302/365",
                 R.drawable.dragons_breath, Elements.solar,
                 new WeaponAttributes(18, 96, 30, 66, 52, 2),
-                "Esse item pode ser encontrado em atividades do Anoitecer, engramas, incursões, na Prisão dos Anciões e no crisol. " +
-                        "Xûr, Agente dos Nove, às vezes vende este item na Torre..",
+                "Esse item pode ser encontrado em atividades do Anoitecer, engramas, incursões, Prisão dos Anciões e crisol. " +
+                        "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
                 new Perks("O tubo de lançamento pode ter até três unidades.",
                         "Balas disparadas por esta arma deixam uma labareda solar ao detonarem.",
                         null)));
