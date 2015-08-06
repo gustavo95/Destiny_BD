@@ -44,5 +44,6 @@ public class WarlockArmorMenu extends Activity {
     public void openWarlockHemeltIdex(View view){
         Intent intent = new Intent(this, ArmorsIndex.class);
         intent.putExtra(ItemsMenu.EXTRA_LIST, new WarlockHelmetsList());
+        startActivity(intent);
     }
 }
