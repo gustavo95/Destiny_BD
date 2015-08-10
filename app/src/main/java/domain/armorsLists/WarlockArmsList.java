@@ -16,12 +16,12 @@ import domain.armors.RareArmor;
 import domain.armors.UncommonArmor;
 
 /**
- * Created by Gustavo on 02/08/2015
+ * Created by Gustavo on 10/08/2015
  */
-public class WarlockHelmetsList extends ArmorList implements Serializable{
+public class WarlockArmsList extends ArmorList implements Serializable {
     private List<Armor> armors;
 
-    public WarlockHelmetsList(){
+    public WarlockArmsList(){
         armors = new ArrayList<>();
         insertExotics();
         insertLegendarys();
@@ -35,37 +35,38 @@ public class WarlockHelmetsList extends ArmorList implements Serializable{
     }
 
     private void insertExotics(){
-        armors.add(new ExoticArmor("Áries", "491", R.drawable.the_ram,
-                new ArmorAttributes(42, 78, 0, 78),
+        armors.add(new ExoticArmor("Algemas do Nada", "402", R.drawable.algemas_nada,
+                new ArmorAttributes(42, 70, 70, 0),
                 "Esse item pode ser encontrado em atividades do Anoitecer, engramas e Prisão dos Anciões." +
                         "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
-                new Perks("Restaura vida toda vez que você pega um Orbe de Luz.",
-                        "Restaura energia da Super Habilidade quando você mata um inimigo com um ataque corpo a corpo.",
-                        "Armadura aumentada. Todos os ataques corpo a corpo de Andarilho do Vácuo utilizam Sugar Vida a cada golpe.")));
+                new Perks("Permite o rastreamento de granadas de dispersão. Carregue uma carga extra de granada de dispersão.",
+                        "Aumenta a distância de arremesso de granada.",
+                        "Reduz o tempo de espera de granada toda vez que você pega um Orbe de Luz.")));
     }
 
     private void insertLegendarys(){
         String randomPerk1 = "Essa arma possui uma vantagem aleatoria";
         String randomPerk2 = "Essa arma possui duas vantagens aleatorias";
 
-        armors.add(new LegendaryArmor("A Coroa Em Espera", "280/491", R.drawable.waiting_crown,
-                new ArmorAttributes(42, 58, 58, 58),
-                "Esse item pode ser encontrado em Assaltos",
+        armors.add(new LegendaryArmor("Ápice Harmônico", "366/402", R.drawable.apice_harmonico_luva,
+                new ArmorAttributes(42, 57, 57, 57),
+                "Esse item pode ser encontrado em Assaltos." +
+                        "Ikore Rey, Vanguarda de Arcanos, às vezes vende este item na Torre.",
                 new Perks(randomPerk2,null,null)));
     }
 
     private void insertRares(){
-        armors.add(new RareArmor("AOS#Al-Suhail", "228/248", R.drawable.aos_ai_suhail,
-                new ArmorAttributes(15, 98, 98, 98)));
+        armors.add(new RareArmor("AOS#Al-Suhail", "188/202", R.drawable.aos_ai_suhail_luva,
+                new ArmorAttributes(15, 87, 87, 87)));
     }
 
     private void insertUncommons(){
-        armors.add(new UncommonArmor("Concílio Axiomático", "135", R.drawable.concilio_axiomatico_cabeca,
-                new ArmorAttributes(0, 0, 67, 67)));
+        armors.add(new UncommonArmor("Concílio Axiomático", "110/113", R.drawable.concilio_axiomatico_luva,
+                new ArmorAttributes(0, 0, 59, 59)));
     }
 
     private void insetCommons(){
-        armors.add(new CommonArmor("Crestadora Lógica", "87", R.drawable.crestadora_logica,
+        armors.add(new CommonArmor("Crestadora Lógica", "32/74", R.drawable.crestadora_logica_luva,
                 new ArmorAttributes(0, 0, 0, 0)));
     }
 }

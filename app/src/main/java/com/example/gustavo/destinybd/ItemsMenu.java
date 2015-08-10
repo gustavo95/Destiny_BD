@@ -62,4 +62,14 @@ public class ItemsMenu extends Activity {
         Intent intent = new Intent(this, WarlockArmorMenu.class);
         startActivity(intent);
     }
+
+    public void openHunterArmoMenu(View view){
+        Intent intent = new Intent(this, HunterArmorMenu.class);
+        startActivity(intent);
+    }
+
+    public void openTitanArmoMenu(View view){
+        Intent intent = new Intent(this, TitanArmorMenu.class);
+        startActivity(intent);
+    }
 }

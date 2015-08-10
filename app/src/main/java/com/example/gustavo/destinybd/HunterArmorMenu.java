@@ -1,29 +1,22 @@
 package com.example.gustavo.destinybd;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import domain.armorsLists.WarlockChestsList;
-import domain.armorsLists.WarlockHelmetsList;
-
-
-public class WarlockArmorMenu extends Activity {
+public class HunterArmorMenu extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_warlock_armor_menu);
+        setContentView(R.layout.activity_hunter_armor_menu);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_warlok_armor_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_hunter_armor_menu, menu);
         return true;
     }
 
@@ -40,17 +33,5 @@ public class WarlockArmorMenu extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void openWarlockHemeltIdex(View view){
-        Intent intent = new Intent(this, ArmorsIndex.class);
-        intent.putExtra(ItemsMenu.EXTRA_LIST, new WarlockHelmetsList());
-        startActivity(intent);
-    }
-
-    public void openWarlockChestIdex(View view){
-        Intent intent = new Intent(this, ArmorsIndex.class);
-        intent.putExtra(ItemsMenu.EXTRA_LIST, new WarlockChestsList());
-        startActivity(intent);
     }
 }

@@ -85,10 +85,10 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="12"
-
         android:layout_alignTop="@+id/ButtonSpecialWeapons"
         android:layout_alignStart="@+id/ButtonWarlockArmor"
-        android:layout_alignEnd="@+id/ButtonWarlockArmor" />
+        android:layout_alignEnd="@+id/ButtonWarlockArmor"
+        android:onClick="openHunterArmoMenu"/>
 
     <Button
         android:id="@+id/ButtonTitanArmor"
@@ -102,10 +102,9 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="12"
-
         android:layout_alignTop="@+id/ButtonHeavyWeapons"
         android:layout_alignStart="@+id/ButtonHunterArmor"
-        android:layout_alignEnd="@+id/ButtonHunterArmor" />
-
+        android:layout_alignEnd="@+id/ButtonHunterArmor"
+        android:onClick="openTitanArmoMenu" />
 
 </RelativeLayout>
