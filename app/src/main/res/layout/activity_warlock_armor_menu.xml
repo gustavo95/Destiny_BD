@@ -22,14 +22,14 @@
         android:layout_margin="2dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:onClick="openWarlockHemeltIdex"/>
+        android:onClick="openWarlockHemeltIndex"/>
 
     <Button
         android:id="@+id/WarlockArmsButton"
         android:text="@string/arms"
         android:layout_width="160dp"
         android:layout_height="155dp"
-        android:background="@drawable/warlock_arms"
+        android:background="@drawable/warlock_arms_2"
         android:gravity="bottom"
         android:textColor="@android:color/white"
         android:shadowColor="@android:color/background_dark"
@@ -39,7 +39,8 @@
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:layout_alignTop="@+id/WarlockHelmetButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="openWarlockArmIndex"/>
 
     <Button
         android:id="@+id/WarlockChestButton"
@@ -59,7 +60,7 @@
         android:layout_marginRight="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
-        android:onClick="openWarlockChestIdex"/>
+        android:onClick="openWarlockChestIndex"/>
 
     <Button
         android:id="@+id/WarlockLegsButton"
@@ -76,6 +77,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:layout_alignTop="@+id/WarlockChestButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="openWarlockLegIndex"/>
 
 </RelativeLayout>

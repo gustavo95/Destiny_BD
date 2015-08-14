@@ -1,9 +1,13 @@
 package com.example.gustavo.destinybd;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import domain.armorsLists.TitanHelmetsList;
 
 public class TitanArmorMenu extends Activity {
 
@@ -33,5 +37,11 @@ public class TitanArmorMenu extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void openTitanHemeltIndex(View view){
+        Intent intent = new Intent(this, ArmorsIndex.class);
+        intent.putExtra(ItemsMenu.EXTRA_LIST, new TitanHelmetsList());
+        startActivity(intent);
     }
 }
