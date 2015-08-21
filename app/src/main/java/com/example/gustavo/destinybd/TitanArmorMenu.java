@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import domain.armorsLists.TitanChestsList;
 import domain.armorsLists.TitanHelmetsList;
 
 public class TitanArmorMenu extends Activity {
@@ -42,6 +43,12 @@ public class TitanArmorMenu extends Activity {
     public void openTitanHemeltIndex(View view){
         Intent intent = new Intent(this, ArmorsIndex.class);
         intent.putExtra(ItemsMenu.EXTRA_LIST, new TitanHelmetsList());
+        startActivity(intent);
+    }
+
+    public void openTitanChestIndex(View view){
+        Intent intent = new Intent(this, ArmorsIndex.class);
+        intent.putExtra(ItemsMenu.EXTRA_LIST, new TitanChestsList());
         startActivity(intent);
     }
 }
