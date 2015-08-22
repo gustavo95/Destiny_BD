@@ -33,8 +33,8 @@ public class WarlockLegsList extends ArmorList implements Serializable {
     }
 
     private void insertLegendarys(){
-        String randomPerk1 = "Essa arma possui uma vantagem aleatoria";
-        String randomPerk2 = "Essa arma possui duas vantagens aleatorias";
+        String randomPerk1 = "Esse item possui uma vantagem aleatoria";
+        String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
         armors.add(new LegendaryArmor("Ápice Harmônico", "204/357", R.drawable.apice_harmonico_perna,
                 new ArmorAttributes(42, 78, 78, 78),

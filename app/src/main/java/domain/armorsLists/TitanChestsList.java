@@ -45,8 +45,8 @@ public class TitanChestsList extends ArmorList implements Serializable {
     }
 
     private void insertLegendarys(){
-        String randomPerk1 = "Essa arma possui uma vantagem aleatoria";
-        String randomPerk2 = "Essa arma possui duas vantagens aleatorias";
+        String randomPerk1 = "Esse item possui uma vantagem aleatoria";
+        String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
         armors.add(new LegendaryArmor("Armada Tipo 3", "306/536", R.drawable.armada_tipo3,
                 new ArmorAttributes(42, 76, 76, 76),

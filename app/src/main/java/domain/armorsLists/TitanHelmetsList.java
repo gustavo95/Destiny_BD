@@ -45,8 +45,8 @@ public class TitanHelmetsList extends ArmorList implements Serializable {
     }
 
     private void insertLegendarys(){
-        String randomPerk1 = "Essa arma possui uma vantagem aleatoria";
-        String randomPerk2 = "Essa arma possui duas vantagens aleatorias";
+        String randomPerk1 = "Esse item possui uma vantagem aleatoria";
+        String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
         armors.add(new LegendaryArmor("A Coroa Em Espera", "280/491", R.drawable.waiting_crown_titan,
                 new ArmorAttributes(42, 58, 58, 58),
