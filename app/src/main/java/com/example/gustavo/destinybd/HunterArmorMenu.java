@@ -7,7 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import domain.armorsLists.HunterArmsList;
+import domain.armorsLists.HunterChestsList;
 import domain.armorsLists.HunterHelmetsList;
+import domain.armorsLists.HunterLegsList;
 
 public class HunterArmorMenu extends Activity {
 
@@ -42,6 +45,24 @@ public class HunterArmorMenu extends Activity {
     public void openHunterHemeltIndex(View view){
         Intent intent = new Intent(this, ArmorsIndex.class);
         intent.putExtra(ItemsMenu.EXTRA_LIST, new HunterHelmetsList());
+        startActivity(intent);
+    }
+
+    public void openHunterChestIndex(View view){
+        Intent intent = new Intent(this, ArmorsIndex.class);
+        intent.putExtra(ItemsMenu.EXTRA_LIST, new HunterChestsList());
+        startActivity(intent);
+    }
+
+    public void openHunterArmsIndex(View view){
+        Intent intent = new Intent(this, ArmorsIndex.class);
+        intent.putExtra(ItemsMenu.EXTRA_LIST, new HunterArmsList());
+        startActivity(intent);
+    }
+
+    public void openHunterLegsIndex(View view){
+        Intent intent = new Intent(this, ArmorsIndex.class);
+        intent.putExtra(ItemsMenu.EXTRA_LIST, new HunterLegsList());
         startActivity(intent);
     }
 }

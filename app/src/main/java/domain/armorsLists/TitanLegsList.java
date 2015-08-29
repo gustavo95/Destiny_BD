@@ -50,7 +50,7 @@ public class TitanLegsList extends ArmorList implements Serializable {
         armors.add(new LegendaryArmor("Armada Tipo 3", "357", R.drawable.armada_tipo3_leg,
                 new ArmorAttributes(42, 53, 53, 53),
                 "Esse item pode ser encontrado em Assaltos",
-                new Perks(randomPerk2,null,null)));
+                new Perks(randomPerk1,null,null)));
     }
 
     private void insertRares(){
