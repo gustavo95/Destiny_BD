@@ -36,7 +36,7 @@ public class HunterHelmetsList extends ArmorList implements Serializable {
 
     private void insertExotics(){
         armors.add(new ExoticArmor("ARACNÍDEO ATS/8", "407/491", R.drawable.aracnideo_ats8,
-                new ArmorAttributes(42, 0, 78, 78),
+                new ArmorAttributes(0, 78, 78),
                 "Esse item pode ser encontrado em atividades do Anoitecer, engramas e Prisão dos Anciões." +
                         "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
                 new Perks("Causar dano com uma granada reduz o tempo de espera do ataque corpo a corpo.",
@@ -49,23 +49,23 @@ public class HunterHelmetsList extends ArmorList implements Serializable {
         String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
         armors.add(new LegendaryArmor("A Coroa Em Espera", "280/491", R.drawable.waiting_crown_hunter,
-                new ArmorAttributes(42, 58, 58, 58),
+                new ArmorAttributes(58, 58, 58),
                 "Esse item pode ser encontrado em Assaltos",
                 new Perks(randomPerk2,null,null)));
     }
 
     private void insertRares(){
         armors.add(new RareArmor("Argus Deimático", "230/248", R.drawable.argus_deimatico,
-                new ArmorAttributes(15, 98, 98, 98)));
+                new ArmorAttributes(98, 98, 98)));
     }
 
     private void insertUncommons(){
         armors.add(new UncommonArmor("Pele de Mangala", "135/139", R.drawable.pele_mangala,
-                new ArmorAttributes(0, 0, 67, 67)));
+                new ArmorAttributes(0, 67, 67)));
     }
 
     private void insetCommons(){
         armors.add(new CommonArmor("Ladina", "87/90", R.drawable.ladina,
-                new ArmorAttributes(0, 0, 0, 0)));
+                new ArmorAttributes(0, 0, 0)));
     }
 }

@@ -36,7 +36,7 @@ public class WarlockChestsList extends ArmorList implements Serializable {
 
     private void insertExotics(){
         armors.add(new ExoticArmor("Coração do Fogo Prático", "339/536", R.drawable.heart_praxic_fire,
-                new ArmorAttributes(42, 0, 181, 0),
+                new ArmorAttributes(0, 181, 0),
                 "Esse item pode ser encontrado em atividades do Anoitecer, engramas, incursões e Prisão dos Anciões." +
                         "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
                 new Perks("Diminui mais todos os tempos de espera das habilidades enquanto Resplendor estiver ativo.",
@@ -49,7 +49,7 @@ public class WarlockChestsList extends ArmorList implements Serializable {
         String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
         armors.add(new LegendaryArmor("Ápice Harmônico", "488/536", R.drawable.apice_harmonico,
-                new ArmorAttributes(42, 85, 85, 85),
+                new ArmorAttributes(85, 85, 85),
                 "Esse item pode ser encontrado em Assaltos." +
                 "Ikore Rey, Vanguarda de Arcanos, às vezes vende este item na Torre.",
                 new Perks(randomPerk2,null,null)));
@@ -57,16 +57,16 @@ public class WarlockChestsList extends ArmorList implements Serializable {
 
     private void insertRares(){
         armors.add(new RareArmor("Nave Nêmese", "249/270", R.drawable.nave_nemese,
-                new ArmorAttributes(15, 113, 113, 113)));
+                new ArmorAttributes(113, 113, 113)));
     }
 
     private void insertUncommons(){
         armors.add(new UncommonArmor("Concílio Axiomático", "147/151", R.drawable.concilio_axiomatico_peito,
-                new ArmorAttributes(0, 0, 88, 88)));
+                new ArmorAttributes(0, 88, 88)));
     }
 
     private void insetCommons(){
         armors.add(new CommonArmor("Crestadora Lógica", "95", R.drawable.crestadora_logica_peito,
-                new ArmorAttributes(0, 0, 0, 0)));
+                new ArmorAttributes(0, 0, 0)));
     }
 }

@@ -36,7 +36,7 @@ public class HunterLegsList extends ArmorList implements Serializable {
 
     private void insertExotics(){
         armors.add(new ExoticArmor("Máquinas de Dança Radiantes", "296/357", R.drawable.maquinas_danca,
-                new ArmorAttributes(42, 0, 0, 166),
+                new ArmorAttributes(0, 0, 166),
                 "Esse item pode ser encontrado em atividades do Anoitecer, engramas e Prisão dos Anciões." +
                         "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
                 new Perks("Aumenta a quantidade de munição de Arma Pesada que você pode carregar.",
@@ -48,23 +48,23 @@ public class HunterLegsList extends ArmorList implements Serializable {
         String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
         armors.add(new LegendaryArmor("Andarilho das Areias", "357", R.drawable.andarilho_areias_legs,
-                new ArmorAttributes(42, 69, 69, 69),
+                new ArmorAttributes(69, 69, 69),
                 "Esse item pode ser encontrado em Assaltos",
                 new Perks(randomPerk1,null,null)));
     }
 
     private void insertRares(){
         armors.add(new RareArmor("Destra", "167", R.drawable.destra_legs,
-                new ArmorAttributes(15, 103, 103, 103)));
+                new ArmorAttributes(103, 103, 103)));
     }
 
     private void insertUncommons(){
         armors.add(new UncommonArmor("Pele de Mangala", "99", R.drawable.pele_mangala_leg,
-                new ArmorAttributes(0, 0, 80, 80)));
+                new ArmorAttributes(0, 80, 80)));
     }
 
     private void insetCommons(){
         armors.add(new CommonArmor("Ladina", "64", R.drawable.ladina_legs,
-                new ArmorAttributes(0, 0, 0, 0)));
+                new ArmorAttributes(0, 0, 0)));
     }
 }

@@ -20,6 +20,7 @@ import domain.armors.Armor;
 import domain.armorsLists.ArmorList;
 
 public class ArmorsIndex extends Activity {
+    public final static String EXTRA_ARMOR = "com.example.gustavo.destinybd.ARMOR";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +83,7 @@ public class ArmorsIndex extends Activity {
                 image.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //openWeaponScreen(weapon);
+                        openArmorScreen(armor);
                     }
                 });
                 tr.addView(image);
@@ -94,7 +95,7 @@ public class ArmorsIndex extends Activity {
                 name.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //openWeaponScreen(weapon);
+                        openArmorScreen(armor);
                     }
                 });
                 tr.addView(name);
@@ -112,5 +113,11 @@ public class ArmorsIndex extends Activity {
         }catch (Exception E){
             System.err.println("Erro!");
         }
+    }
+
+    public void openArmorScreen(Armor w){
+        Intent  intent = new Intent(this, ArmorScreen.class);
+        intent.putExtra(EXTRA_ARMOR, w);
+        startActivity(intent);
     }
 }

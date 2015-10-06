@@ -36,7 +36,7 @@ public class TitanArmsList extends ArmorList implements Serializable {
 
     private void insertExotics(){
         armors.add(new ExoticArmor("Asas da Ruína", "333/402", R.drawable.asas_ruina,
-                new ArmorAttributes(42, 0, 0, 121),
+                new ArmorAttributes(0, 0, 121),
                 "Esse item pode ser encontrado em atividades do Anoitecer, engramas e Prisão dos Anciões." +
                         "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
                 new Perks("Munição pesada aparece com mais frequência e contém mais balas em cada aparição.",
@@ -49,23 +49,23 @@ public class TitanArmsList extends ArmorList implements Serializable {
         String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
         armors.add(new LegendaryArmor("Armada Tipo 3", "229/402", R.drawable.armada_tipo3_leg,
-                new ArmorAttributes(42, 69, 69, 69),
+                new ArmorAttributes(69, 69, 69),
                 "Esse item pode ser encontrado em Assaltos",
                 new Perks(randomPerk2,null,null)));
     }
 
     private void insertRares(){
         armors.add(new RareArmor("Fulcro Raku Tipo x", "188/202", R.drawable.fulcro_raku_luva,
-                new ArmorAttributes(15, 87, 87, 87)));
+                new ArmorAttributes(87, 87, 87)));
     }
 
     private void insertUncommons(){
         armors.add(new UncommonArmor("Highlander Tipo x", "110/113", R.drawable.highlander_luva,
-                new ArmorAttributes(0, 0, 59, 59)));
+                new ArmorAttributes(0, 59, 59)));
     }
 
     private void insetCommons(){
         armors.add(new CommonArmor("Anti-incêndio", "35", R.drawable.anti_incendio_arm,
-                new ArmorAttributes(0, 0, 0, 0)));
+                new ArmorAttributes(0, 0, 0)));
     }
 }
