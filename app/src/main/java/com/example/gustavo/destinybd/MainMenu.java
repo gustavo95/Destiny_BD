@@ -3,8 +3,6 @@ package com.example.gustavo.destinybd;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 
@@ -16,31 +14,13 @@ public class MainMenu extends Activity {
         setContentView(R.layout.activity_main_menu);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu_ab, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_search) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     public void openItemsMenu(View view){
         Intent intent = new Intent(this, ItemsMenu.class);
+        startActivity(intent);
+    }
+
+    public  void openQuestIndex(View view){
+        Intent intent = new Intent(this, QuestIndex.class);
         startActivity(intent);
     }
 }

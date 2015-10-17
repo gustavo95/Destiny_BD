@@ -1,9 +1,9 @@
 package com.example.gustavo.destinybd;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,26 +14,22 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import domain.armors.Armor;
-import domain.armorsLists.ArmorList;
+import domain.quests.Quest;
+import domain.quests.QuestList;
 
-public class ArmorsIndex extends Activity {
-    public final static String EXTRA_ARMOR = "com.example.gustavo.destinybd.ARMOR";
+public class QuestIndex extends Activity {
+    public final static String EXTRA_QUEST = "com.example.gustavo.destinybd.QUEST";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_armors_index);
+        setContentView(R.layout.activity_quest_index);
 
-        Intent intent = getIntent();
-
-        ArmorList al = (ArmorList) intent.getSerializableExtra(ItemsMenu.EXTRA_LIST);
-        armorsButtons(al.getArmors());
-
+        questsButtons(new QuestList().getQuests());
     }
 
-    private void armorsButtons(List<Armor> armorList){
-        Float f = new Float(0.75);
+    private void questsButtons(List<Quest> questList){
+        Float f = new Float(0.40);
 
         ImageButton image;
         Button name;
@@ -45,33 +41,33 @@ public class ArmorsIndex extends Activity {
         int lWidth =  RelativeLayout.LayoutParams.FILL_PARENT;
 
         try {
-            for (Armor a : armorList) {
-                final Armor armor = a;
+            for (Quest q : questList) {
+                final Quest quest = q;
                 tr = new TableRow(this);
-                tr.setBackgroundColor(a.color());
+                tr.setBackgroundColor(Color.GRAY);
 
 
                 image = new ImageButton(this);
-                image.setImageDrawable(getResources().getDrawable(a.getImage()));
-                image.setBackgroundColor(Color.TRANSPARENT);
+                image.setImageDrawable(getResources().getDrawable(q.getImage()));
+                image.setBackgroundColor(Color.WHITE);
                 image.setScaleX(f);
                 image.setScaleY(f);
                 image.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        openArmorScreen(armor);
+                        openQuestScreen(quest);
                     }
                 });
                 tr.addView(image);
 
                 name = new Button(this);
                 name.setTextSize(16);
-                name.setText("\n" + a.getName() + "\nDefesa: " + a.getDefense());
+                name.setText("\n" + q.getName());
                 name.setBackgroundColor(Color.TRANSPARENT);
                 name.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        openArmorScreen(armor);
+                        openQuestScreen(quest);
                     }
                 });
                 tr.addView(name);
@@ -91,9 +87,9 @@ public class ArmorsIndex extends Activity {
         }
     }
 
-    public void openArmorScreen(Armor w){
-        Intent  intent = new Intent(this, ArmorScreen.class);
-        intent.putExtra(EXTRA_ARMOR, w);
-        startActivity(intent);
+    public void openQuestScreen(Quest q){
+        //Intent intent = new Intent(this, QuestScreen.class);
+        //intent.putExtra(EXTRA_QUEST, q);
+        //startActivity(intent);
     }
 }
