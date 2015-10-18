@@ -22,10 +22,10 @@ public class ArmorScreen extends Activity {
 
         Intent intent = getIntent();
 
-        ArmorLayout((Armor) intent.getSerializableExtra(ArmorsIndex.EXTRA_ARMOR));
+        armorLayout((Armor) intent.getSerializableExtra(ArmorsIndex.EXTRA_ARMOR));
     }
 
-    private void ArmorLayout(Armor armor){
+    private void armorLayout(Armor armor){
 
         TableLayout tl = (TableLayout) findViewById(R.id.tableArmor1);
         int lHeight = RelativeLayout.LayoutParams.WRAP_CONTENT;

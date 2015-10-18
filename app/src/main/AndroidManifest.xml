@@ -71,6 +71,11 @@
             android:label="@string/mission"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".QuestScreen"
+            android:label="@string/mission"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

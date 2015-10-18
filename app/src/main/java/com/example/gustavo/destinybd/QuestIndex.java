@@ -29,7 +29,7 @@ public class QuestIndex extends Activity {
     }
 
     private void questsButtons(List<Quest> questList){
-        Float f = new Float(0.40);
+        Float f = new Float(0.75);
 
         ImageButton image;
         Button name;
@@ -44,12 +44,12 @@ public class QuestIndex extends Activity {
             for (Quest q : questList) {
                 final Quest quest = q;
                 tr = new TableRow(this);
-                tr.setBackgroundColor(Color.GRAY);
+                tr.setBackgroundColor(Color.rgb(127,127,127));
 
 
                 image = new ImageButton(this);
                 image.setImageDrawable(getResources().getDrawable(q.getImage()));
-                image.setBackgroundColor(Color.WHITE);
+                image.setBackgroundColor(Color.TRANSPARENT);
                 image.setScaleX(f);
                 image.setScaleY(f);
                 image.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +62,7 @@ public class QuestIndex extends Activity {
 
                 name = new Button(this);
                 name.setTextSize(16);
-                name.setText("\n" + q.getName());
+                name.setText("\n\n\n\n" + q.getName());
                 name.setBackgroundColor(Color.TRANSPARENT);
                 name.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -88,8 +88,8 @@ public class QuestIndex extends Activity {
     }
 
     public void openQuestScreen(Quest q){
-        //Intent intent = new Intent(this, QuestScreen.class);
-        //intent.putExtra(EXTRA_QUEST, q);
-        //startActivity(intent);
+        Intent intent = new Intent(this, QuestScreen.class);
+        intent.putExtra(EXTRA_QUEST, q);
+        startActivity(intent);
     }
 }

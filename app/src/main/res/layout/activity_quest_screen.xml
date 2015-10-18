@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/wallpaper"
+    tools:context="com.example.gustavo.destinybd.QuestScreen">
+
+    <TableLayout
+        android:id="@+id/tableQuest1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:shrinkColumns="0"
+        android:layout_marginStart="15dp"/>
+
+    <TableLayout
+        android:id="@+id/tableQuest2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableQuest1"
+        android:scrollbars="horizontal"
+        android:shrinkColumns="0" />
+
+    <TableLayout
+        android:id="@+id/tableQuest3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableQuest2"
+        android:scrollbars="horizontal"/>
+
+</RelativeLayout>
