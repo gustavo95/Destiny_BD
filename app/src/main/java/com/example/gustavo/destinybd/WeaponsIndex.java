@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import domain.WeaponsLists.HeavyWeaponsList;
-import domain.WeaponsLists.PrimaryWeaponsList;
-import domain.WeaponsLists.SpecialWeaponsList;
+import dataBase.weaponsLists.HeavyWeaponsList;
+import dataBase.weaponsLists.PrimaryWeaponsList;
+import dataBase.weaponsLists.SpecialWeaponsList;
 import domain.weapons.Weapon;
 
 

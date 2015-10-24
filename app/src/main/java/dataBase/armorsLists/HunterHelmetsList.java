@@ -1,4 +1,4 @@
-package domain.armorsLists;
+package dataBase.armorsLists;
 
 import com.example.gustavo.destinybd.R;
 
@@ -16,12 +16,12 @@ import domain.armors.RareArmor;
 import domain.armors.UncommonArmor;
 
 /**
- * Created by Gustavo on 22/08/2015
+ * Created by Gustavo on 24/08/2015
  */
-public class TitanArmsList extends ArmorList implements Serializable {
+public class HunterHelmetsList extends ArmorList implements Serializable {
     private List<Armor> armors;
 
-    public TitanArmsList(){
+    public HunterHelmetsList(){
         armors = new ArrayList<>();
         insertExotics();
         insertLegendarys();
@@ -35,37 +35,37 @@ public class TitanArmsList extends ArmorList implements Serializable {
     }
 
     private void insertExotics(){
-        armors.add(new ExoticArmor("Asas da Ruína", "333/402", R.drawable.asas_ruina,
-                new ArmorAttributes(0, 0, 121),
+        armors.add(new ExoticArmor("ARACNÍDEO ATS/8", "407/491", R.drawable.aracnideo_ats8,
+                new ArmorAttributes(0, 78, 78),
                 "Esse item pode ser encontrado em atividades do Anoitecer, engramas e Prisão dos Anciões." +
                         "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
-                new Perks("Munição pesada aparece com mais frequência e contém mais balas em cada aparição.",
-                        "Causar dano com um ataque corpo a corpo reduz o tempo de espera de granada.",
-                        "Aumenta a velocidade de recarga de todas as Armas Especiais.")));
+                new Perks("Causar dano com uma granada reduz o tempo de espera do ataque corpo a corpo.",
+                        "Restaura energia da Super Habilidade quando você mata um inimigo com uma granada.",
+                        "Sua Arma Dourada aproxima o zoom ao mirar para maior precisão.")));
     }
 
     private void insertLegendarys(){
         String randomPerk1 = "Esse item possui uma vantagem aleatoria";
         String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
-        armors.add(new LegendaryArmor("Armada Tipo 3", "229/402", R.drawable.armada_tipo3_leg,
-                new ArmorAttributes(69, 69, 69),
+        armors.add(new LegendaryArmor("A Coroa Em Espera", "280/491", R.drawable.waiting_crown_hunter,
+                new ArmorAttributes(58, 58, 58),
                 "Esse item pode ser encontrado em Assaltos",
                 new Perks(randomPerk2,null,null)));
     }
 
     private void insertRares(){
-        armors.add(new RareArmor("Fulcro Raku Tipo x", "188/202", R.drawable.fulcro_raku_luva,
-                new ArmorAttributes(87, 87, 87)));
+        armors.add(new RareArmor("Argus Deimático", "230/248", R.drawable.argus_deimatico,
+                new ArmorAttributes(98, 98, 98)));
     }
 
     private void insertUncommons(){
-        armors.add(new UncommonArmor("Highlander Tipo x", "110/113", R.drawable.highlander_luva,
-                new ArmorAttributes(0, 59, 59)));
+        armors.add(new UncommonArmor("Pele de Mangala", "135/139", R.drawable.pele_mangala,
+                new ArmorAttributes(0, 67, 67)));
     }
 
     private void insetCommons(){
-        armors.add(new CommonArmor("Anti-incêndio", "35", R.drawable.anti_incendio_arm,
+        armors.add(new CommonArmor("Ladina", "87/90", R.drawable.ladina,
                 new ArmorAttributes(0, 0, 0)));
     }
 }

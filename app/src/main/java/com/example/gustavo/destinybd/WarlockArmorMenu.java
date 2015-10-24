@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import domain.armorsLists.WarlockArmsList;
-import domain.armorsLists.WarlockChestsList;
-import domain.armorsLists.WarlockHelmetsList;
-import domain.armorsLists.WarlockLegsList;
+import dataBase.armorsLists.WarlockArmsList;
+import dataBase.armorsLists.WarlockChestsList;
+import dataBase.armorsLists.WarlockHelmetsList;
+import dataBase.armorsLists.WarlockLegsList;
 
 
 public class WarlockArmorMenu extends Activity {

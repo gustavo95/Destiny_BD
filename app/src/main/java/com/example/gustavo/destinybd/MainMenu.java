@@ -23,4 +23,9 @@ public class MainMenu extends Activity {
         Intent intent = new Intent(this, QuestIndex.class);
         startActivity(intent);
     }
+
+    public  void openEventsScreen(View view){
+        Intent intent = new Intent(this, EventsScreen.class);
+        startActivity(intent);
+    }
 }

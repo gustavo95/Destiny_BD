@@ -1,4 +1,4 @@
-package domain.armorsLists;
+package dataBase.armorsLists;
 
 import com.example.gustavo.destinybd.R;
 

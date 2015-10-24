@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import domain.armors.Armor;
-import domain.armorsLists.ArmorList;
+import dataBase.armorsLists.ArmorList;
 
 public class ArmorsIndex extends Activity {
     public final static String EXTRA_ARMOR = "com.example.gustavo.destinybd.ARMOR";

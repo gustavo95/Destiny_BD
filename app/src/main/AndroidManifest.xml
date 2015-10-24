@@ -76,6 +76,11 @@
             android:label="@string/mission"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".EventsScreen"
+            android:label="@string/events"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

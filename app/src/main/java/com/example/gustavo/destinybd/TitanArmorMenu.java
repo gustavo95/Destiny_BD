@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import domain.armorsLists.TitanArmsList;
-import domain.armorsLists.TitanChestsList;
-import domain.armorsLists.TitanHelmetsList;
-import domain.armorsLists.TitanLegsList;
+import dataBase.armorsLists.TitanArmsList;
+import dataBase.armorsLists.TitanChestsList;
+import dataBase.armorsLists.TitanHelmetsList;
+import dataBase.armorsLists.TitanLegsList;
 
 public class TitanArmorMenu extends Activity {
 
