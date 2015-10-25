@@ -3,7 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="game">O jogo</string>
+    <string name="game">Sobre o jogo</string>
     <string name="guardian">Equipamentos</string>
     <string name="mission">Jornadas</string>
     <string name="events">Eventos</string>
@@ -18,5 +18,6 @@
     <string name="arms">Manopla</string>
     <string name="chest">Armadura de torso</string>
     <string name="legs">Armadura de pernas</string>
+    <string name="history">História</string>
 
 </resources>

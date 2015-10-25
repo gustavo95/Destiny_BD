@@ -28,4 +28,9 @@ public class MainMenu extends Activity {
         Intent intent = new Intent(this, EventsScreen.class);
         startActivity(intent);
     }
+
+    public  void openGameScreen(View view){
+        Intent intent = new Intent(this, GameScreen.class);
+        startActivity(intent);
+    }
 }

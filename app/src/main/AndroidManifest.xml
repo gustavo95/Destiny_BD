@@ -79,6 +79,16 @@
         <activity
             android:name=".EventsScreen"
             android:label="@string/events"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GameScreen"
+            android:label="@string/game"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".HistoryScreen"
+            android:label="@string/history"
             android:screenOrientation="portrait">
         </activity>
     </application>
