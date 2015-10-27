@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import dataBase.weaponsLists.HeavyWeaponsList;
+import dataBase.weaponsLists.PrimaryWeaponsList;
+import dataBase.weaponsLists.SpecialWeaponsList;
+
 public class ItemsMenu extends Activity {
-    public final static String EXTRA_INTEGER = "com.example.gustavo.destinybd.INTEGER";
     public final static String EXTRA_LIST = "com.example.gustavo.destinybd.LIST";
 
     @Override
@@ -17,19 +20,19 @@ public class ItemsMenu extends Activity {
 
     public void openPrimaryWeaponIndex(View view){
         Intent intent = new Intent(this, WeaponsIndex.class);
-        intent.putExtra(EXTRA_INTEGER, 1);
+        intent.putExtra(EXTRA_LIST, new PrimaryWeaponsList());
         startActivity(intent);
     }
 
     public void openSpecialWeaponIndex(View view){
         Intent intent = new Intent(this, WeaponsIndex.class);
-        intent.putExtra(EXTRA_INTEGER, 2);
+        intent.putExtra(EXTRA_LIST, new SpecialWeaponsList());
         startActivity(intent);
     }
 
     public void openHeavyWeaponIndex(View view){
         Intent intent = new Intent(this, WeaponsIndex.class);
-        intent.putExtra(EXTRA_INTEGER, 3);
+        intent.putExtra(EXTRA_LIST, new HeavyWeaponsList());
         startActivity(intent);
     }
 

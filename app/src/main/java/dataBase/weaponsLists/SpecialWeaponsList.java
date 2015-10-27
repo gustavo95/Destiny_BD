@@ -2,6 +2,7 @@ package dataBase.weaponsLists;
 
 import com.example.gustavo.destinybd.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,7 @@ import domain.weapons.WeaponAttributes;
 /**
  * Created by Gustavo on 23/06/2015
  */
-public class SpecialWeaponsList {
+public class SpecialWeaponsList extends WeaponsList implements Serializable {
     private static final String pistola = "Pistola";
     private static final String fFusao = "Fuzil de Fusão";
     private static final String fPrecisao = "Fuzil de Precisão";

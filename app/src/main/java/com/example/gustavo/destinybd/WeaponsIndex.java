@@ -17,6 +17,7 @@ import java.util.List;
 import dataBase.weaponsLists.HeavyWeaponsList;
 import dataBase.weaponsLists.PrimaryWeaponsList;
 import dataBase.weaponsLists.SpecialWeaponsList;
+import dataBase.weaponsLists.WeaponsList;
 import domain.weapons.Weapon;
 
 
@@ -31,18 +32,8 @@ public class WeaponsIndex extends Activity {
 
         setContentView(R.layout.activity_weapons_index);
 
-        if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 1) == 1){
-            PrimaryWeaponsList weapons = new PrimaryWeaponsList();
-            weaponsButtons(weapons.getWeapons());
-        }
-        else if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 2) == 2) {
-            SpecialWeaponsList weapons = new SpecialWeaponsList();
-            weaponsButtons(weapons.getWeapons());
-        }
-        else if(intent.getIntExtra(ItemsMenu.EXTRA_INTEGER, 3) == 3) {
-            HeavyWeaponsList weapons = new HeavyWeaponsList();
-            weaponsButtons(weapons.getWeapons());
-        }
+        WeaponsList al = (WeaponsList) intent.getSerializableExtra(ItemsMenu.EXTRA_LIST);
+        weaponsButtons(al.getWeapons());
     }
 
     private void weaponsButtons(List<Weapon> weaponsList){
