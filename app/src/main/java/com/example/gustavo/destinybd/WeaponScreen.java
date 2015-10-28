@@ -18,7 +18,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import domain.Elements;
+import domain.others.Elements;
 import domain.weapons.Weapon;
 
 

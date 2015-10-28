@@ -1,4 +1,4 @@
-package dataBase.weaponsLists;
+package storage.weaponsLists;
 
 import com.example.gustavo.destinybd.R;
 
@@ -6,8 +6,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Elements;
-import domain.Perks;
+import domain.others.Elements;
+import domain.others.Perks;
 import domain.weapons.CommonWeapon;
 import domain.weapons.ExoticWeapon;
 import domain.weapons.LegendaryWeapon;

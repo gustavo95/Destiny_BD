@@ -1,4 +1,4 @@
-package dataBase.armorsLists;
+package storage.armorsLists;
 
 import java.util.List;
 

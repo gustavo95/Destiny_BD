@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import domain.quests.Quest;
-import dataBase.questsLists.QuestList;
+import storage.questsLists.QuestList;
 
 public class QuestIndex extends Activity {
     public final static String EXTRA_QUEST = "com.example.gustavo.destinybd.QUEST";

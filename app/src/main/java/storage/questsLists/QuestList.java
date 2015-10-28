@@ -1,4 +1,4 @@
-package dataBase.questsLists;
+package storage.questsLists;
 
 import com.example.gustavo.destinybd.R;
 

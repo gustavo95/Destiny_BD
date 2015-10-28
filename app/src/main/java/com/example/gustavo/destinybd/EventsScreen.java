@@ -1,26 +1,18 @@
 package com.example.gustavo.destinybd;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.RelativeLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-import services.TimeManagement;
+import services.time.TimeManagement;
 
 public class EventsScreen extends Activity {
 

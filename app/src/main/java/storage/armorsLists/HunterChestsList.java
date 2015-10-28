@@ -1,4 +1,4 @@
-package dataBase.armorsLists;
+package storage.armorsLists;
 
 import com.example.gustavo.destinybd.R;
 
@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Perks;
+import domain.others.Perks;
 import domain.armors.Armor;
 import domain.armors.ArmorAttributes;
 import domain.armors.CommonArmor;
@@ -16,12 +16,12 @@ import domain.armors.RareArmor;
 import domain.armors.UncommonArmor;
 
 /**
- * Created by Gustavo on 02/08/2015
+ * Created by Gustavo on 29/08/2015
  */
-public class WarlockHelmetsList extends ArmorList implements Serializable{
+public class HunterChestsList extends ArmorList implements Serializable {
     private List<Armor> armors;
 
-    public WarlockHelmetsList(){
+    public HunterChestsList(){
         armors = new ArrayList<>();
         insertExotics();
         insertLegendarys();
@@ -35,37 +35,37 @@ public class WarlockHelmetsList extends ArmorList implements Serializable{
     }
 
     private void insertExotics(){
-        armors.add(new ExoticArmor("Áries", "491", R.drawable.the_ram,
-                new ArmorAttributes(78, 0, 78),
+        armors.add(new ExoticArmor("Brasão da Alpha Lupi", "339/536", R.drawable.alpha_lupi_hunter,
+                new ArmorAttributes(0, 0, 181),
                 "Esse item pode ser encontrado em atividades do Anoitecer, engramas e Prisão dos Anciões." +
                         "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
-                new Perks("Restaura vida toda vez que você pega um Orbe de Luz.",
-                        "Restaura energia da Super Habilidade quando você mata um inimigo com um ataque corpo a corpo.",
-                        "Armadura aumentada. Todos os ataques corpo a corpo de Andarilho do Vácuo utilizam Sugar Vida a cada golpe.")));
+                new Perks("Você ressuscita companheiros caídos mais rápido, e eles te ressuscitam mais rápido. A sua super habilidade gera orbes adicionais.",
+                        "Aumenta a quantidade de munição de Arma Especial que você pode carregar.",
+                        "Aumenta a quantidade de munição de Canhão de Mão que você pode carregar.")));
     }
 
     private void insertLegendarys(){
         String randomPerk1 = "Esse item possui uma vantagem aleatoria";
         String randomPerk2 = "Esse item possui duas vantagens aleatorias";
 
-        armors.add(new LegendaryArmor("A Coroa Em Espera", "280/491", R.drawable.waiting_crown,
-                new ArmorAttributes(58, 58, 58),
+        armors.add(new LegendaryArmor("Andarilho das Areias", "306/536", R.drawable.andarilho_areias,
+                new ArmorAttributes(76, 76, 76),
                 "Esse item pode ser encontrado em Assaltos",
                 new Perks(randomPerk2,null,null)));
     }
 
     private void insertRares(){
-        armors.add(new RareArmor("AOS#Al-Suhail", "228/248", R.drawable.aos_ai_suhail,
-                new ArmorAttributes(98, 98, 98)));
+        armors.add(new RareArmor("Destra", "249/270", R.drawable.destra,
+                new ArmorAttributes(113, 113, 113)));
     }
 
     private void insertUncommons(){
-        armors.add(new UncommonArmor("Concílio Axiomático", "135/139", R.drawable.concilio_axiomatico_cabeca,
-                new ArmorAttributes(0, 67, 67)));
+        armors.add(new UncommonArmor("Pele de Mangala", "147/151", R.drawable.pele_mangala_chest,
+                new ArmorAttributes(0, 88, 88)));
     }
 
     private void insetCommons(){
-        armors.add(new CommonArmor("Crestadora Lógica", "87", R.drawable.crestadora_logica,
+        armors.add(new CommonArmor("Ladina", "47", R.drawable.ladina_chest,
                 new ArmorAttributes(0, 0, 0)));
     }
 }

@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import dataBase.weaponsLists.HeavyWeaponsList;
-import dataBase.weaponsLists.PrimaryWeaponsList;
-import dataBase.weaponsLists.SpecialWeaponsList;
+import storage.weaponsLists.HeavyWeaponsList;
+import storage.weaponsLists.PrimaryWeaponsList;
+import storage.weaponsLists.SpecialWeaponsList;
 
 public class ItemsMenu extends Activity {
     public final static String EXTRA_LIST = "com.example.gustavo.destinybd.LIST";

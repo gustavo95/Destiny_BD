@@ -1,4 +1,4 @@
-package domain;
+package domain.others;
 
 import java.io.Serializable;
 

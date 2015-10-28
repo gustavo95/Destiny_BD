@@ -2,8 +2,8 @@ package domain.weapons;
 
 import java.io.Serializable;
 
-import domain.Elements;
-import domain.Perks;
+import domain.others.Elements;
+import domain.others.Perks;
 
 /**
  * Created by Gustavo on 06/06/2015

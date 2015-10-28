@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import dataBase.armorsLists.HunterArmsList;
-import dataBase.armorsLists.HunterChestsList;
-import dataBase.armorsLists.HunterHelmetsList;
-import dataBase.armorsLists.HunterLegsList;
+import storage.armorsLists.HunterArmsList;
+import storage.armorsLists.HunterChestsList;
+import storage.armorsLists.HunterHelmetsList;
+import storage.armorsLists.HunterLegsList;
 
 public class HunterArmorMenu extends Activity {
 

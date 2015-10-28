@@ -4,7 +4,7 @@ import android.graphics.Color;
 
 import java.io.Serializable;
 
-import domain.Perks;
+import domain.others.Perks;
 
 /**
  * Created by Gustavo on 01/08/2015

@@ -4,7 +4,7 @@ import android.graphics.Color;
 
 import java.io.Serializable;
 
-import domain.Elements;
+import domain.others.Elements;
 
 /**
  * Created by Gustavo on 07/06/2015

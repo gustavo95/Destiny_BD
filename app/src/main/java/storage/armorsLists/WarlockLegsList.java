@@ -1,4 +1,4 @@
-package dataBase.armorsLists;
+package storage.armorsLists;
 
 import com.example.gustavo.destinybd.R;
 
@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Perks;
+import domain.others.Perks;
 import domain.armors.Armor;
 import domain.armors.ArmorAttributes;
 import domain.armors.CommonArmor;
