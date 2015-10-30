@@ -19,7 +19,7 @@
     <Button
         android:id="@+id/ButtonHistory"
         android:text="@string/history"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="175dp"
         android:background="@drawable/history"
         android:gravity="bottom"

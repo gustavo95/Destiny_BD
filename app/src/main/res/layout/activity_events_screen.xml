@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/raid"
         android:text="raid"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="175dp"
         android:background="@drawable/raid"
         android:gravity="bottom"
@@ -64,7 +64,7 @@
     <Button
         android:id="@+id/trial"
         android:text="trial"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="175dp"
         android:background="@drawable/trial"
         android:gravity="bottom"
