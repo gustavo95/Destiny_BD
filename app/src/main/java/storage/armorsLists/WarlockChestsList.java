@@ -37,8 +37,8 @@ public class WarlockChestsList extends ArmorList implements Serializable {
     private void insertExotics(){
         armors.add(new ExoticArmor("Coração do Fogo Prático", "339/536", R.drawable.heart_praxic_fire,
                 new ArmorAttributes(0, 181, 0),
-                "Esse item pode ser encontrado em atividades do Anoitecer, engramas, incursões e Prisão dos Anciões." +
-                        "Xûr, Agente dos Nove, às vezes vende este item na Torre.",
+                "Esse item pode ser encontrado em atividades do Anoitecer, engramas, incursões e Prisão dos Anciões. " +
+                        "Xûr, Agente dos Nove, às vezes vende este item na Torre. ",
                 new Perks("Diminui mais todos os tempos de espera das habilidades enquanto Resplendor estiver ativo.",
                         "Aumenta a quantidade de munição de Fuzil de Fusão que você pode carregar.",
                         "Aumenta a quantidade de munição de Arma Pesada que você pode carregar.")));

@@ -30,7 +30,7 @@ public class EventsScreen extends Activity {
         trialCount(tm.getDiference(tm.getTime(), tm.nextDayOfWeek(Calendar.FRIDAY, 17)));
     }
 
-    public void raidCount(long time){
+    private void raidCount(long time){
 
         new CountDownTimer(time, 1000) {
 
@@ -52,7 +52,7 @@ public class EventsScreen extends Activity {
         }.start();
     }
 
-    public void xurCount(long time){
+    private void xurCount(long time){
 
         new CountDownTimer(time, 1000) {
 
@@ -74,7 +74,7 @@ public class EventsScreen extends Activity {
         }.start();
     }
 
-    public void prisonCount(long time){
+    private void prisonCount(long time){
 
         new CountDownTimer(time, 1000) {
 
@@ -96,7 +96,7 @@ public class EventsScreen extends Activity {
         }.start();
     }
 
-    public void trialCount(long time){
+    private void trialCount(long time){
 
         new CountDownTimer(time, 1000) {
 
