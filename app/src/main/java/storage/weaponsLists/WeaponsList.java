@@ -1,6 +1,5 @@
 package storage.weaponsLists;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import domain.weapons.Weapon;

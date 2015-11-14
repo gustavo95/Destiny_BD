@@ -24,10 +24,10 @@ public class EventsScreen extends Activity {
         Intent intent = getIntent();
 
         TimeManagement tm = new TimeManagement();
-        raidCount(tm.getDiference(tm.getTime(), tm.nextDayOfWeek(Calendar.TUESDAY,9)));
-        xurCount(tm.getDiference(tm.getTime(), tm.nextDayOfWeek(Calendar.FRIDAY, 9)));
-        prisonCount(tm.getDiference(tm.getTime(), tm.nextDayOfWeek(Calendar.TUESDAY, 9)));
-        trialCount(tm.getDiference(tm.getTime(), tm.nextDayOfWeek(Calendar.FRIDAY, 17)));
+        raidCount(tm.getDiference(tm.getTime(), TimeManagement.nextDayOfWeek(Calendar.TUESDAY, 9)));
+        xurCount(tm.getDiference(tm.getTime(), TimeManagement.nextDayOfWeek(Calendar.FRIDAY, 9)));
+        prisonCount(tm.getDiference(tm.getTime(), TimeManagement.nextDayOfWeek(Calendar.TUESDAY, 9)));
+        trialCount(tm.getDiference(tm.getTime(), TimeManagement.nextDayOfWeek(Calendar.FRIDAY, 17)));
     }
 
     private void raidCount(long time){

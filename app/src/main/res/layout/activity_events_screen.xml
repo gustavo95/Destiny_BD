@@ -10,7 +10,6 @@
 
     <Button
         android:id="@+id/raid"
-        android:text="raid"
         android:layout_width="350dp"
         android:layout_height="175dp"
         android:background="@drawable/raid"
@@ -27,7 +26,6 @@
 
     <Button
         android:id="@+id/xur"
-        android:text="xur"
         android:layout_width="180dp"
         android:layout_height="175dp"
         android:background="@drawable/xur"
@@ -46,7 +44,6 @@
 
     <Button
         android:id="@+id/prison"
-        android:text="prison"
         android:layout_width="170dp"
         android:layout_height="175dp"
         android:background="@drawable/prison"
@@ -63,7 +60,6 @@
 
     <Button
         android:id="@+id/trial"
-        android:text="trial"
         android:layout_width="350dp"
         android:layout_height="175dp"
         android:background="@drawable/trial"

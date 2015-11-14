@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
-        android:text="\tDestiny é um jogo online de tiro em primeira pessoa. Foi produzido pela Bungie e publicado pela Activision como parte de um acordo de publicação de dez anos entre as duas empresas. Destiny foi lançado em 9 de Setembro de 2014 para PlayStation 3, PlayStation 4, Xbox 360 e Xbox One. Em maio de 2015 a Bungie informou que Destiny atingiu a marca de 20 milhões jogadores."
+        android:text="@string/aboutGame"
         android:textSize="16sp"
         android:id="@+id/textView" />
 

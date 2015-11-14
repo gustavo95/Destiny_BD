@@ -16,7 +16,7 @@ public class GameScreen extends Activity {
     }
 
     public  void openHistoryScreen(View view){
-        Intent intent = new Intent(this, HistoryScreen.class);
+        Intent intent = new Intent(this, ScreenHistory.class);
         startActivity(intent);
     }
 

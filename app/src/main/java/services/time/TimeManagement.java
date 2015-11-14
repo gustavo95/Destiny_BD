@@ -22,16 +22,22 @@ public class TimeManagement {
 
     public static Date nextDayOfWeek(int dow, int hour) {
         Calendar date = Calendar.getInstance(TimeZone.getTimeZone("GMT+00:00"));
+
+        int diffDay = dow - date.get(Calendar.DAY_OF_WEEK);
+        int diffHour = hour - date.get(Calendar.HOUR_OF_DAY);
+        int diffMinute = 0 - date.get(Calendar.MINUTE);
+        int diffSecond = 0 - date.get(Calendar.SECOND);
+
+        if (!(diffDay > 0) && !(diffHour > 0) && !(diffMinute > 0) && !(diffSecond > 0)) {
+            diffDay += 6;
+        }else if(!(diffDay > 0)){
+            diffDay += 7;
+        }
+
+        date.add(Calendar.DAY_OF_MONTH, diffDay);
         date.set(Calendar.HOUR_OF_DAY, hour);
         date.set(Calendar.MINUTE, 0);
         date.set(Calendar.SECOND, 0);
-
-        int diff = dow - date.get(Calendar.DAY_OF_WEEK);
-        if (!(diff > 0)) {
-            diff += 7;
-        }
-
-        date.add(Calendar.DAY_OF_MONTH, diff);
 
         Date d = date.getTime();
         return d;

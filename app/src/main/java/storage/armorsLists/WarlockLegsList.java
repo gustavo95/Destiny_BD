@@ -21,7 +21,7 @@ public class WarlockLegsList extends ArmorList implements Serializable {
     private List<Armor> armors;
 
     public WarlockLegsList(){
-        armors = new ArrayList<>();;
+        armors = new ArrayList<>();
         insertLegendarys();
         insertRares();
         insertUncommons();
